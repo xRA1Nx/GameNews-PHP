@@ -89,12 +89,12 @@ a:visited {
   color: rgba(255, 255, 255, 0.66);
 }
 
-.white-section a:link,
+/* .white-section a:link,
 .white-section a:visited {
   color: #222;
   cursor: pointer;
   text-decoration: underline;
-}
+} */
 
 .container {
   max-width: 134.8rem;
