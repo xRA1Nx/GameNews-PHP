@@ -158,7 +158,7 @@ function show_form($errors = [], $input = []){
     
     echo <<<_HTML_
             <div class="forms-box">
-            <h1 class="h1-white">
+            <h1 class="h1-white h1-white-margin-b">
                     Регистрация
                 </h1>
                 <form class ="reuse-form" action="" method="POST">

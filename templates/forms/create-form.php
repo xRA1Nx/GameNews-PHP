@@ -1,6 +1,6 @@
 <section class="white-section">
   <div class="forms-box">
-    <h1 class="h1-white">
+    <h1 class="h1-white h1-white-margin-b">
       Разместить статью
     </h1>
     <form class="reuse-form" action="" method="GET">
