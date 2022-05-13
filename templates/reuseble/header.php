@@ -45,12 +45,20 @@
         <nav class="nav-menu">
           <ul class="nav-menu-list">
             <li>
-              <a class="need-to-autorized" href="#">Войти</a>
-              <img class="nav-bar-icon" src="./imgs/Profile.svg" />
+              <a class="need-to-autorized" href="./sign-in.php">Войти</a>
+              <ion-icon class="nav-bar-ion-icon" name="person-outline"></ion-icon>
             </li>
             <li>
               <a class="need-to-autorized" href="./registration.php">Регистрация</a>
-              <img class="nav-bar-icon" src="./imgs/Profile.svg" />
+              <ion-icon class="nav-bar-ion-icon" name="person-add-outline"></ion-icon>
+            </li>
+            <li>
+              <a class="need-to-autorized" href="./create.php">Написать статью</a>
+              <ion-icon class="nav-bar-ion-icon" name="create-outline"></ion-icon>
+            </li>
+            <li>
+              <a class="need-to-autorized" href="./subscriptions.php">Подписки</a>
+              <ion-icon class="nav-bar-ion-icon" name="book-outline"></ion-icon>
             </li>
           </ul>
         </nav>

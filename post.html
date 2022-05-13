@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="discription" content="Новостной игровой портал" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./imgs/icons/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -95,14 +97,38 @@
             <nav class="nav-menu">
               <ul class="nav-menu-list">
                 <li>
-                  <a class="need-to-autorized" href="#">Войти</a>
-                  <img class="nav-bar-icon" src="./imgs/Profile.svg" />
+                  <a class="need-to-autorized" href="./sign-in.html">Войти</a>
+                  <ion-icon
+                    class="nav-bar-ion-icon"
+                    name="person-outline"
+                  ></ion-icon>
                 </li>
                 <li>
                   <a class="need-to-autorized" href="./registration.html"
                     >Регистрация</a
                   >
-                  <img class="nav-bar-icon" src="./imgs/Profile.svg" />
+                  <ion-icon
+                    class="nav-bar-ion-icon"
+                    name="person-add-outline"
+                  ></ion-icon>
+                </li>
+                <li>
+                  <a class="need-to-autorized" href="./create.html"
+                    >Написать статью</a
+                  >
+                  <ion-icon
+                    class="nav-bar-ion-icon"
+                    name="create-outline"
+                  ></ion-icon>
+                </li>
+                <li>
+                  <a class="need-to-autorized" href="./subscriptions.html"
+                    >Подписки</a
+                  >
+                  <ion-icon
+                    class="nav-bar-ion-icon"
+                    name="book-outline"
+                  ></ion-icon>
                 </li>
               </ul>
             </nav>
@@ -214,7 +240,35 @@
               WARCRAFT ARCLIGHT RUMBLE: НОВАЯ МОБИЛЬНАЯ ИГРА ОТ BLIZZARD
               ENTERTAINMENT
             </p>
-            <a class="make-comment-link" href="#comments">Комментировать</a>
+            <nav class="post-actions">
+              <a
+                class="post-actions-link describ-link"
+                href="./subscriptions.html"
+                >Подписаться</a
+              >
+
+              <ul class="post-actions-list">
+                <li>
+                  <a
+                    class="post-actions-link post-actions-link-red"
+                    href="./create.html"
+                    >Редактировать</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="post-actions-link post-actions-link-red"
+                    href="./post-del.html"
+                    >Удалить</a
+                  >
+                </li>
+                <li>
+                  <a class="post-actions-link" href="#comments"
+                    >Комментировать</a
+                  >
+                </li>
+              </ul>
+            </nav>
           </h1>
           <div class="post-author-conteiner">
             <p>

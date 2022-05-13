@@ -234,41 +234,43 @@
       <section class="white-section">
         <div class="forms-box">
           <h1 class="h1-white">
-            Регистрация
+            Разместить статью
           </h1>
-           <form class ="reuse-form" action="" method="POST">
-                                
+           <form class ="reuse-form" action="" method="GET">                                          
                 <div>
-                    <label for="first_name">Имя:</label><br>
-                    <input class="inp" type="text" name="first_name" placeholder="Только русские буквы" value="">
+                  <label for="categorys">Категория:</label><br>
+                  <select id="categorys" class="inp" name="categorys">
+                    <option value="">Выберите категорию:</option>
+                    <option value="volvo">Diablo</option>
+                    <option value="saab">Overwatch</option>
+                    <option value="volvo">Starcraft</option>
+                    <option value="saab">Warcraft</option>
+                    </select>
                     <span></span>
                 </div>
                 
-                <div>
-                    <label for="last_name">Фамилия:</label><br>
-                    <input class="inp" type="text" name="last_name" placeholder="Только русские буквы" value="">
-                    <span></span>
-                </div>
                 
+
                 <div>
-                    <label for="login">Логин:</label><br>
-                    <input class="inp" type="text" name="login" placeholder="латинские буквы и цифры" value="">
+                    <label for="inp-post-title">Заголовок статьи:</label><br>
+                    <input class="inp" type="text" name="inp-post-title" id="inp-post-title" placeholder="не более 50 символов" value="" size=50 >
                     <span></span>
                 </div>
+
+                <div>
+                  <label for="inp-post-img">Изображение статьи:</label><br>
+                  <input  type="file" name="inp-post-img" id="inp-post-img" placeholder="прикрепите изображение" value="" size=50 >
+                  <span></span>
+              </div>
+
+              <div>
+                <label for="inp-post-img">Текст статьи:</label><br>
                 
-                <div>
-                    <label for="email">Электронная почта:</label><br>
-                    <input class="inp" type="email" name="email" value="" placeholder="ваш email">
-                    <span></span>
-                </div>
-                
-                <div>
-                    <label for="password">Пароль:</label><br>
-                    <input class="inp" type="password" name="password" placeholder="более восьми символов" value="" >
-                    <span></span>
-                </div>
+                <textarea  class= "inp post-text-area" placeholder="Введите ваше сообщение"></textarea>
+                <span></span>
+            </div>
                           
-                <input class="inp-submit" type="submit" value="Отправить данные">      
+                <input class="inp-submit" type="submit" value="разместить">      
             </form> 
       </section>
       <aside class="aside-right">
