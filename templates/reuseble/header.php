@@ -1,3 +1,8 @@
+<?php
+
+?>
+
+
 <header>
   <div class="header-top" id="top">
     <div class="container header-top-section">
@@ -41,34 +46,51 @@
           <ion-icon name="menu-outline" class="nav-menu-icons menu-enter"></ion-icon>
           <ion-icon name="close-outline" class="nav-menu-icons menu-exit"></ion-icon>
         </button>
-
         <nav class="nav-menu">
           <ul class="nav-menu-list">
+            <?php
+            if (isset($_SESSION['email'])) {
+              echo <<<NAV
+            <li>
+              <a class="need-to-autorized" href="./lk.php">Личный кабинет</a>
+              <ion-icon class="nav-bar-ion-icon" name="person-circle-outline"></ion-icon>
+            </li>
+       
+            <li>
+            <a class="need-to-autorized" href="./create.php">Написать статью</a>
+            <ion-icon class="nav-bar-ion-icon" name="create-outline"></ion-icon>
+          </li>
+          <li>
+            <a class="need-to-autorized" href="./subscriptions.php">Подписки</a>
+            <ion-icon class="nav-bar-ion-icon" name="book-outline"></ion-icon>
+          </li>
+          <li>
+          <a class="need-to-autorized" href="./exit.php">Выйти</a>
+          <ion-icon class="nav-bar-ion-icon" name="log-out-outline"></ion-icon>
+        </li>
+NAV;
+            } else {
+              echo <<<NAV
             <li>
               <a class="need-to-autorized" href="./sign-in.php">Войти</a>
-              <ion-icon class="nav-bar-ion-icon" name="person-outline"></ion-icon>
+              <ion-icon class="nav-bar-ion-icon" name="log-in-outline"></ion-icon>
             </li>
             <li>
               <a class="need-to-autorized" href="./registration.php">Регистрация</a>
               <ion-icon class="nav-bar-ion-icon" name="person-add-outline"></ion-icon>
             </li>
-            <li>
-              <a class="need-to-autorized" href="./create.php">Написать статью</a>
-              <ion-icon class="nav-bar-ion-icon" name="create-outline"></ion-icon>
-            </li>
-            <li>
-              <a class="need-to-autorized" href="./subscriptions.php">Подписки</a>
-              <ion-icon class="nav-bar-ion-icon" name="book-outline"></ion-icon>
-            </li>
-          </ul>
+         
         </nav>
-
-        <form class="header-form-search">
-          <input type="text" placeholder="ПОИСК" class="header-input-search" />
-          <button class="header-input-submit">
-            <img src="./imgs/icons/search.svg" class="header-img-search" alt="search icon" />
-          </button>
-        </form>
+NAV;
+            }
+            ?>
+          </ul>
+          <form class="header-form-search">
+            <input type="text" placeholder="ПОИСК" class="header-input-search" />
+            <button class="header-input-submit">
+              <img src="./imgs/icons/search.svg" class="header-img-search" alt="search icon" />
+            </button>
+          </form>
       </div>
     </div>
   </div>

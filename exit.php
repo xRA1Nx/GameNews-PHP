@@ -1,4 +1,5 @@
-<?php 
-  session_start();
-  $_SESSION = [];
-  header("location:index.php");?>
+<?php
+session_start();
+session_unset();
+// $_SESSION = [];
+header("location:index.php");

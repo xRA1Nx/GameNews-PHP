@@ -1,8 +1,6 @@
 /* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
 
-/**************************/
-/* BELOW 1344px (Smaller desktops) */
-/**************************/
+/* 1137px */
 
 @media (max-width: 79em) {
   .game-icons-list {
@@ -24,16 +22,6 @@
   .aside-right {
     width: 34%;
   }
-
-  .main-news:nth-child(10) {
-    grid-column: 1/3;
-    justify-self: center;
-    width: 50%;
-  }
-
-  /* .last-one {
-    display: none;
-  } */
 }
 
 /* 880px */
@@ -51,17 +39,7 @@
   .container.container-main {
     gap: 0.4rem;
   }
-  .grid3 {
-    grid-template-columns: 1fr;
-    width: 50%;
-  }
-  .aside-right {
-    width: 50%;
-  }
-  .pagination {
-    width: 200%;
-    margin: 0;
-  }
+
   .main-news:nth-child(10) {
     grid-column: 1;
     width: 100%;
@@ -90,7 +68,6 @@
     font-size: 2rem;
   }
   .post-author-conteiner {
-    /* flex-direction: row; */
     align-items: flex-start;
   }
   .post-author-conteiner p {
@@ -117,6 +94,9 @@
   }
   .container {
     padding: 0 1.2rem;
+  }
+  .hot-watched-discussed p {
+    padding: 0.5rem 1rem;
   }
 }
 
