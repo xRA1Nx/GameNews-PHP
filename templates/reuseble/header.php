@@ -60,10 +60,7 @@
             <a class="need-to-autorized" href="./create.php">Написать статью</a>
             <ion-icon class="nav-bar-ion-icon" name="create-outline"></ion-icon>
           </li>
-          <li>
-            <a class="need-to-autorized" href="./subscriptions.php">Подписки</a>
-            <ion-icon class="nav-bar-ion-icon" name="book-outline"></ion-icon>
-          </li>
+     
           <li>
           <a class="need-to-autorized" href="./exit.php">Выйти</a>
           <ion-icon class="nav-bar-ion-icon" name="log-out-outline"></ion-icon>

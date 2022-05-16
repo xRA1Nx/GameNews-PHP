@@ -61,8 +61,16 @@
   flex-direction: column;
 }
 
-.news-default-setings {
-  padding: 0 1rem;
+.h2-news {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-color: #b77a11;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.4;
+  padding: 0.3rem 1.2rem;
+  height: 6rem;
 }
 
 .news-container {
@@ -92,6 +100,8 @@
 
 .news-img {
   transition: all 0.2s;
+  display: block;
+  width: 100%;
 }
 
 .news-img:hover {

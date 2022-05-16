@@ -1,5 +1,5 @@
 <section class="white-section">
-  <?php
+    <?php
 
     require('./templates/functions/my_reg_function.php');
 
@@ -11,10 +11,9 @@
             show_form($errors, $input);
             // показываем сообщение о регистрации    
         } else {
-            foreach ($_POST as $key => $val) {
-                $_SESSION[$key] = $val;
-            }
-            header("location:registration.php");
+
+            $_SESSION['email'] = $_POST["email"];
+            header("location:registration-done.php");
         }
         //если метод GET , то выводим изначальную форму
     } else {

@@ -9,16 +9,24 @@ include "./templates/reuseble/head.php"; ?>
   include "./templates/reuseble/header.php"; ?>
   <main class="container container-white" id="main">
 
+
+    <!-- // PUT YOUR SECTION HERE -->
+
+    <section class="white-section">
+      <div class="forms-box">
+        <h1 class="h1-white h1-white-margin-b">
+          <?php echo $_SESSION['email'] ?>, Добро пожаловать!!!
+        </h1>
+        <h3>На данный момент у вас нет подписок</h3>
+        <p><a href='index.php'>На главную страницу</a></p>
+        <p><a href='exit.php'>Выйти</a></p>
+
+    </section>
+
+    <!-- // PUT YOUR SECTION HERE -->
+
+
     <?php
-    // PUT YOUR SECTION HERE
-
-    // PUT YOUR SECTION HERE
-    echo '<section class="white-section">';
-    echo "<h2>$_SESSION[email], Добро пожаловать в лк!</h2>";
-    echo "<p><a href='index.php'>На главную страницу</a></p>";
-    echo "<p><a href='exit.php'>Выйти</a></p>";
-    echo '</section>';
-
     // aside 
     include "./templates/reuseble/aside.php"; ?>
   </main>

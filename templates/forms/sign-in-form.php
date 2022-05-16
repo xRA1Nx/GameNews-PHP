@@ -35,4 +35,6 @@ if (!isset($_SESSION["email"])) {
   
 SECTION;
   }
+} else {
+  header("location:index.php");
 }

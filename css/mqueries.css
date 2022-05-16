@@ -1,13 +1,12 @@
 /* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
 
-/* 1137px */
-
+/* 1264px */
 @media (max-width: 79em) {
   .game-icons-list {
     gap: 4rem;
   }
 }
-
+/* 1137px */
 @media (max-width: 71em) {
   html {
     font-size: 56.25%;
@@ -20,7 +19,7 @@
     width: 66%;
   }
   .aside-right {
-    width: 34%;
+    width: 32.8%;
   }
 }
 
@@ -125,8 +124,11 @@
     margin-bottom: 1.2rem;
   }
 }
-@media (max-width: 25em) {
+/* 500px */
+
+/* 720px */
+@media (max-width: 32rem) {
   html {
-    font-size: 31.25%;
+    font-size: 37.5%;
   }
 }

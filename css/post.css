@@ -49,11 +49,6 @@
   width: 100%;
 }
 
-.news-img {
-  display: block;
-  width: 100%;
-}
-
 .post-text {
   font-size: 1.6rem;
   line-height: 1.4;
@@ -64,17 +59,6 @@
   position: relative;
 }
 
-.h2-news {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  background-color: #b77a11;
-  font-size: 1.4rem;
-  font-weight: 100;
-  line-height: 1.4;
-  padding: 0.3rem 1.2rem;
-  height: 6rem;
-}
 .post-actions {
   display: flex;
   justify-content: space-between;

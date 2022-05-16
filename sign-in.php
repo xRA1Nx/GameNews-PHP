@@ -1,9 +1,6 @@
 <?php
 ob_start();
 
-// if ($_SESSION) {
-//   header("location:lk.php");
-// }
 // head 
 include "./templates/reuseble/head.php"; ?>
 <title>Games Portal</title>
