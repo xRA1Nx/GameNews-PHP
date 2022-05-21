@@ -16,7 +16,7 @@ include "./templates/reuseble/head.php"; ?>
     // registration form
     include "./templates/forms/registration_form.php";
     // aside 
-    include "./templates/reuseble/aside.php";
+    // include "./templates/reuseble/aside.php";
     ?>
   </main>
 

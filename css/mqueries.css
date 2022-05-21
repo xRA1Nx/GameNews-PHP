@@ -36,7 +36,7 @@
   }
 
   .container.container-main {
-    gap: 0.4rem;
+    gap: 0.8rem;
   }
 
   .main-news:nth-child(10) {
@@ -97,6 +97,11 @@
   .hot-watched-discussed p {
     padding: 0.5rem 1rem;
   }
+
+  .grid {
+    column-gap: 0.4rem;
+    row-gap: 0.3rem;
+  }
 }
 
 /* 602px */
@@ -126,7 +131,6 @@
 }
 /* 500px */
 
-/* 720px */
 @media (max-width: 32rem) {
   html {
     font-size: 37.5%;

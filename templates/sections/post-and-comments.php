@@ -10,7 +10,7 @@
 
         <ul class="post-actions-list">
           <?php
-          if (isset($_SESSION['email'])) {
+          if (isset($_SESSION['email']) and is_author()) {
             echo <<< NAV
                 <li>
                   <a
@@ -50,7 +50,7 @@ NAV;
         <span class="post-author-conteiner-content">22</span>
       </p>
     </div>
-    <img class="post-main-img" src="./imgs/Posts/Warcraft-Arclight-Rumble-placeholder.jpg" alt="POST big Img" />
+    <img class="post-main-img" src="./imgs/Posts/post-001.jpg" alt="POST big Img" />
     <p class="post-text">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia
       cum dicta fugiat dolores unde inventore? Cumque excepturi quo, earum

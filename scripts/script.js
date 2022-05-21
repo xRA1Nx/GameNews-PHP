@@ -1,47 +1,47 @@
-const changeGrid = () => {
-  const mainAdept = () => {
-    // получаем элементы из документа
+// const changeGrid = () => {
+//   const mainAdept = () => {
+//     // получаем элементы из документа
 
-    let main = document.querySelector("#main");
-    let grid = document.getElementById("grid-section");
-    let aside = document.querySelector(".aside-right");
+//     let main = document.querySelector("#main");
+//     let grid = document.getElementById("grid-section");
+//     let aside = document.querySelector(".aside-right");
 
-    // тэги а hot discussion & hot watched
-    let hd = document.querySelector(".link-hot-disscused");
-    let hw = document.querySelector(".link-hot-watched");
-    // jpgs
-    let jpgsAside = document.querySelectorAll(".aside-right .news-img");
-    let jpgsMain = document.querySelectorAll(".grid .news-img");
-    // ширина текущего экрана
-    let mainWidth = main.offsetWidth;
+//     // тэги а hot discussion & hot watched
+//     let hd = document.querySelector(".link-hot-disscused");
+//     let hw = document.querySelector(".link-hot-watched");
+//     // jpgs
+//     let jpgsAside = document.querySelectorAll(".aside-right .news-img");
+//     let jpgsMain = document.querySelectorAll(".grid .news-img");
+//     // ширина текущего экрана
+//     let mainWidth = main.offsetWidth;
 
-    // получаем их css свойства из окна
-    let jpgMainCurH = window.getComputedStyle(jpgsMain[0]).height;
+//     // получаем их css свойства из окна
+//     let jpgMainCurH = window.getComputedStyle(jpgsMain[0]).height;
 
-    for (jpg of jpgsAside) {
-      jpg.style.height = jpgMainCurH;
-    }
+//     for (jpg of jpgsAside) {
+//       jpg.style.height = jpgMainCurH;
+//     }
 
-    // aside.style.height = jpgMainCurH;
-    // console.log(`aside: ${aside.style.width} картинка ${jpgMainCurWid}`);
+//     // aside.style.height = jpgMainCurH;
+//     // console.log(`aside: ${aside.style.width} картинка ${jpgMainCurWid}`);
 
-    if (Number(mainWidth) <= 1100) {
-      grid.classList.add("grid2");
-      grid.classList.remove("grid3");
-      hd.style.fontSize = "8px";
-      hw.style.fontSize = "8px";
-      aside.style.width = "33%";
-    } else {
-      grid.classList.add("grid3");
-      grid.classList.remove("grid2");
-      hd.style.fontSize = "10px";
-      hw.style.fontSize = "10px";
-      aside.style.width = "25%";
-    }
-  };
-  window.addEventListener("resize", mainAdept);
-  window.addEventListener("load", mainAdept);
-};
+//     if (Number(mainWidth) <= 1100) {
+//       grid.classList.add("grid2");
+//       grid.classList.remove("grid3");
+//       hd.style.fontSize = "8px";
+//       hw.style.fontSize = "8px";
+//       aside.style.width = "33%";
+//     } else {
+//       grid.classList.add("grid3");
+//       grid.classList.remove("grid2");
+//       hd.style.fontSize = "10px";
+//       hw.style.fontSize = "10px";
+//       aside.style.width = "25%";
+//     }
+//   };
+//   window.addEventListener("resize", mainAdept);
+//   window.addEventListener("load", mainAdept);
+// };
 
 const headerNavGameLinks = () => {
   let navList = document.querySelectorAll(".game-icons-list li");

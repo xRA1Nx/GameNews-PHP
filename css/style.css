@@ -25,7 +25,9 @@ Medium: 1.4
 
 --- 02 COLORS
 - Primery:  #b77a11
-- Tints(оттенки):#fff4e6;
+- Tints(оттенки):
+#92620e
+#fff4e6;
 - Shades(тон): 
 - Greys:
  #4c4c4c - small border line header
@@ -62,10 +64,9 @@ html {
 
 body {
   background: url("../imgs/bg.jpg");
-  font-family: "Open Sans", "Lucida Sans", "Lucida Sans Regular",
-    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 500;
 
   display: flex;
   flex-direction: column;
@@ -90,10 +91,22 @@ a:visited {
 }
 
 .white-section a:link,
-.white-section a:visited {
-  color: #222;
+.white-section a:visited,
+.white-section-100 a:link,
+.white-section-100 a:visited {
+  color: #92620e;
   cursor: pointer;
+  /* text-decoration: underline; */
+  transition: all 0.5s;
+  font-size: 1.2rem;
+}
+
+.white-section a:hover,
+.white-section a:active,
+.white-section-100 a:hover,
+.white-section-100 a:active {
   text-decoration: underline;
+  font-size: 1.2rem;
 }
 
 .container {
@@ -108,6 +121,7 @@ a:visited {
   width: 100%;
   height: 100%;
   margin-bottom: 2.4rem;
+  justify-content: center;
 }
 
 .container-flex {
@@ -122,6 +136,14 @@ a:visited {
   padding: 1.4rem 2.4rem 1.2rem 2.4rem;
   margin-right: 1rem;
   width: 75%;
+}
+
+.white-section-100 {
+  background-color: #fff4e6;
+  padding: 1.4rem 2.4rem 1.2rem 2.4rem;
+  margin-right: 1rem;
+  width: 75%;
+  justify-content: center;
 }
 
 /* .forms-box {
@@ -183,3 +205,66 @@ a:visited {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto;
 } */
+
+/***************************/
+/* USERS PROFILE */
+/***************************/
+.lk-box {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #444;
+}
+
+.profile {
+  display: flex;
+  gap: 4.8rem;
+  align-items: center;
+}
+.profile-avatar {
+  display: block;
+  width: 8rem;
+  height: 8rem;
+}
+
+/* .chancge-ava:link,
+.chancge-ava:visited {
+  margin-bottom: 3.2rem;
+} */
+
+.get-premium {
+  margin: 3.2rem 0;
+}
+
+.subsribtions {
+  margin-bottom: 3.2rem;
+}
+
+.subsribtions-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.get-premium a:link,
+.get-premium a:visited {
+  color: #b77a11;
+  text-decoration: none;
+  transition: all 0.5s;
+  font-size: 1.6rem;
+}
+
+.get-premium a:active,
+.get-premium a:hover {
+  text-decoration: underline;
+}
+
+.lk-box .exit-link:link,
+.lk-box .exit-link:visited {
+  font-size: 1.6rem;
+  color: red;
+  transition: all 0.5s;
+}
+
+.lk-box .exit-link:active,
+.lk-box .exit-link:hover {
+  text-decoration: underline;
+}

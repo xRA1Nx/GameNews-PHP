@@ -19,7 +19,8 @@ include "./templates/reuseble/head.php"; ?>
 
 
     // aside
-    include "./templates/reuseble/aside.php"; ?>
+    // include "./templates/reuseble/aside.php"; 
+    ?>
   </main>
 
 

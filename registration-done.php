@@ -1,15 +1,25 @@
 <?php // head 
 ob_start();
+
+
+
 include "./templates/reuseble/head.php"; ?>
 <title>Games Portal</title>
 </head>
 
 <body>
   <?php   //header
+  $email = $_SESSION['email'];
+  $fname = $_SESSION['fname'];
+  $lname = $_SESSION['lname'];
+  unset($_SESSION['email']);
+
+
   include "./templates/reuseble/header.php"; ?>
   <main class="container container-white" id="main">
 
     <?php
+
     // PUT YOUR SECTION HERE
     include "./templates/sections/reg-done-section.php";
     // PUT YOUR SECTION HERE
@@ -17,7 +27,8 @@ include "./templates/reuseble/head.php"; ?>
 
 
     // aside
-    include "./templates/reuseble/aside.php"; ?>
+    // include "./templates/reuseble/aside.php"; 
+    ?>
   </main>
 
 
