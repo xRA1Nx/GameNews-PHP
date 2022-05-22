@@ -59,12 +59,17 @@
   position: relative;
 }
 
+.h1-postnews-title li {
+  list-style: none;
+}
+
 .post-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1.6rem;
-  margin-bottom: 0.8rem;
+
+  list-style: none;
+  /* list-style: none; */
 }
 .post-actions-list {
   display: flex;
@@ -169,11 +174,15 @@
 .post .post-actions-link:link,
 .post .post-actions-link:visited {
   /* position: absolute; */
+  display: block;
+  text-align: end;
   color: #92620e;
   /* bottom: 0.8rem;
   right: 0; */
   font-size: 1rem;
   text-transform: uppercase;
+  margin-top: 1.6rem;
+  margin-bottom: 0.8rem;
   text-decoration: none;
   /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); */
   transition: all 0.3s;

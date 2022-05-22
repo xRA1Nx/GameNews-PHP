@@ -417,11 +417,11 @@ _HTML_;
 function get_post_and_category($id)
 {
     require './templates/configs/db_connect.php';
-    $post_query = "SELECT id, title, post_description, text, main_img, small_img
+    $post_query = "SELECT id, id_category, title, post_description, text, main_img, small_img
     FROM news WHERE id = $id";
     $category_query = "SELECT name, id_news 
     FROM categorys  WHERE id_news = $id";
-    $category = $pdo->query($category_query)->fetch();
+    // $category = $pdo->query($category_query)->fetch();
     $post = $pdo->query($post_query)->fetch();
-    return [$post, $category];
+    return $post;
 }

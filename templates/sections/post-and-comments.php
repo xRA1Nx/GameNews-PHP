@@ -1,7 +1,7 @@
 <?php
+require './templates/functions/arrays_fns.php';
 if ($_SERVER['REQUEST_METHOD'] === "GET") {
-
-  $post_query = "SELECT id_author,  title, text, main_img, date_time 
+  $post_query = "SELECT id, id_author, id_category,  title, text, main_img, date_time 
   FROM news WHERE id = $_GET[id]";
   $post = $pdo->query($post_query)->fetch();
   $query_author = "SELECT nickname FROM users where id = $post[id_author]";
@@ -9,6 +9,9 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
   $post_date_time = date_format(date_create($post['date_time']), 'd.m.Y H:i');
   $query_comments = "SELECT COUNT(id_news) AS comments_count FROM comments where id_news = $_GET[id]";
   $comments_count = $pdo->query($query_comments)->fetch()['comments_count'];
+  $category = $post["id_category"];
+  // $category = $pdo->query("SELECT id FROM categorys WHERE  id_news =  $_GET[id]")->fetch()["id"];
+  $users_categorys = $pdo->query("SELECT id_category FROM users_categorys WHERE id_user = $_SESSION[id]")->fetchall();
 
 ?>
 <!-- POST ACTIONS -->
@@ -16,13 +19,21 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
   <div class="post">
     <h1 class="h1-postnews-title h1-white">
       <p>
-        <?php echo $post['title'] ?>
-      </p>
-      <nav class="post-actions">
-        <a class="post-actions-link describ-link" href="./subscriptions.php">Подписаться</a>
+        <?php
+          echo "$post[title] </p>";
 
-        <ul class="post-actions-list">
-          <?php
+          if (isset($_SESSION['email']) and !in_fetch_array($users_categorys, "id_category", $category)) {
+
+            if (isset($_SESSION['email'])) {
+
+              echo <<< SUBSCRIBE
+            <nav nav class="post-actions">
+            <a class="post-actions-link describ-link"
+          href="./subscribe.php?id_category=$post[id_category] & id_user=$_SESSION[id]
+          & action=add& post_id=$_GET[id] ">Подписаться</a>
+             <ul class="post-actions-list">
+  SUBSCRIBE;
+            }
             // Только для пользователей с правами - АВТОР
             if (isset($_SESSION['email']) and is_author()) {
               echo <<< NAV
@@ -42,13 +53,14 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
                 </li>
 NAV;
             }
-            ?>
-          <!-- Информация  о статье-->
-          <li>
-            <a class="post-actions-link" href="#form-comments">Комментировать</a>
-          </li>
+          }
+          ?>
+        <!-- Информация  о статье-->
+        <li>
+          <a class="post-actions-link" href="#form-comments">комментарии</a>
+        </li>
         </ul>
-      </nav>
+        </nav>
     </h1>
     <div class="post-author-conteiner">
       <p>
@@ -98,7 +110,6 @@ NAV;
 
   <?php
       // Выгружаем из БД комментарии и данные пользователей по ним и заполняем страницу
-      require './templates/functions/arrays_fns.php';
       $query_post_comments = "SELECT id_news, id_user, text, date_time FROM comments WHERE id_news = $_GET[id] ORDER BY date_time DESC";
       $get_comment = $pdo->query($query_post_comments);
       while ($comment = $get_comment->fetch()) {

@@ -19,14 +19,43 @@ ALTER TABLE authors AUTO_INCREMENT=0;
 INSERT INTO authors  
 VALUES(1);
 
+-- CATEGORYS
+
+DELETE FROM categorys;
+ALTER TABLE categorys AUTO_INCREMENT=0;
+
+
+INSERT INTO categorys  (name)
+VALUES('Diablo');
+
+INSERT INTO categorys  (name)
+VALUES('Overwatch');
+
+INSERT INTO categorys  (name)
+VALUES('HoS');
+
+INSERT INTO categorys  (name)
+VALUES('Starcraft');
+
+INSERT INTO categorys  (name)
+VALUES('Hearthstone');
+
+INSERT INTO categorys  (name)
+VALUES('Warcraft');
+
+INSERT INTO categorys  (name)
+VALUES('Другие игры');
+
+
 -- NEWS
 
 DELETE FROM news;
 ALTER TABLE news AUTO_INCREMENT=0;
 
-INSERT INTO news  (id_author, small_img, main_img, title, post_description, text)
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
 VALUES( 
-1, 
+1,
+5, 
 "./imgs/News/news-009.jpg",
 "./imgs/Posts/post-009.jpg",
 "Hearthstone: грядущее изменение баланса",
@@ -48,9 +77,10 @@ VALUES(
 Мы очень серьезно подходим ко всем изменениям поэтому будем придерживаться нашего принципа о том, что изменять карты нужно только при крайней необходимости. После долгих размышлений мы пришли к выводу, что стоимость карты Спустить Собак должна быть увеличена до 3 маны. Это изменение сделает игру против карты Спустить Собак более комфортной, при этом оставит Охотнику возможность сделать сильный ход."
 );
 
-INSERT INTO news  (id_author, small_img, main_img, title, post_description, text)
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
 VALUES( 
-1, 
+1,
+2, 
 "./imgs/News/news-008.jpg",
 "./imgs/Posts/post-008.jpg",
 "Overwatch 2: вся информация о бета-тестировании",
@@ -81,9 +111,10 @@ Overwatch развивается. Мы уже сделали первый шаг
 Спасибо, что вместе с нами вступаете в новую эру Overwatch. Нам не терпится показать вам больше новинок!"
 );
 
-INSERT INTO news  (id_author, small_img, main_img, title, post_description, text)
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
 VALUES( 
-1, 
+1,
+6, 
 "./imgs/News/news-001.jpg",
 "./imgs/Posts/post-001.jpg",
 "Warcraft Arclight Rumble: новая мобильная игра от Blizzard
@@ -151,8 +182,9 @@ Entertainment",
 Меняйте и корректируйте способности своих командиров между уровнями, чтобы подготовиться к грядущим испытаниям и обнаружить новые полезные сочетания."
 );
 
-INSERT INTO news  (id_author, small_img, main_img, title, post_description, text)
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
 VALUES( 
+1,
 1, 
 "./imgs/News/news-002.gif",
 "./imgs/Posts/post-002.jpg",
@@ -162,9 +194,10 @@ Carbot Animations по мативам Diablol 2!",
 "Уже в октябре 2022г. выйдет в свет долгожданный анимационный сериал Diablol 2  от студии Carbot Animations, эпизоды которого посвящены забавным ситуациям, героям и боссам, непростым взаимоотношениям персонажей и разным механикам второй части игр серии Diablo."
 );
 
-INSERT INTO news  (id_author, small_img, main_img, title, post_description, text)
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
 VALUES(
-1, 
+1,
+6, 
 "./imgs/News/news-003.jpg",
 "./imgs/Posts/post-003.jpg",
 "Слух: Blizzard работала над двумя мобильными играми Warcraft",
@@ -179,9 +212,10 @@ VALUES(
 Вторая игра, анонс которой должен состояться 3 мая, больше всего похожа на одну из онлайн стратегий серии Clash от студии Supercell."
 );
 
-INSERT INTO news  (id_author, small_img, main_img, title, post_description, text)
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
 VALUES( 
-1, 
+1,
+7, 
 "./imgs/News/news-004.jpg",
 "./imgs/Posts/post-004.jpg",
 "Battle.net: поддержка новых валют",
@@ -203,9 +237,10 @@ Battle.net® регулярно пересматривает список вал
 До встречи в онлайне!"
 );
 
-INSERT INTO news  (id_author, small_img, main_img, title, post_description, text)
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
 VALUES( 
-1, 
+1,
+6, 
 "./imgs/News/news-005.jpg",
 "./imgs/Posts/post-005.jpg",
 "Warcraft Mobile: анонс игры состоится 3 мая",
@@ -232,8 +267,9 @@ reveal.blizzard.com
 Нам не терпится поделиться с вами подробностями о новом приключении во вселенной Warcraft, так что почаще заходите на страницу reveal.blizzard.com."
 );
 
-INSERT INTO news  (id_author, small_img, main_img, title, post_description, text)
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
 VALUES(
+1,
 1, 
 "./imgs/News/news-006.jpg",
 "./imgs/Posts/post-006.jpg",
@@ -268,8 +304,9 @@ VALUES(
 10 лет всегда исполняется только один раз, и Diablo III — не исключение. Украсьте стены изображениями, созданными лучшими ремесленниками Преисподней, приобретя эксклюзивные иллюстрации в честь 10-летнего юбилея Diablo III. Успейте воспользоваться этим ПЛАМЕННЫМ предложением, нефалемы!"
 );
 
-INSERT INTO news  (id_author, small_img, main_img, title, post_description, text)
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
 VALUES(
+1,
 1, 
 "./imgs/News/news-007.jpg",
 "./imgs/Posts/post-007.jpg",
@@ -347,38 +384,7 @@ INSERT INTO comments(id_news, id_user, text)
 VALUES(4, 3, "благодарю за статью!");
 
 
--- CATEGORYS
 
-DELETE FROM categorys;
-ALTER TABLE categorys AUTO_INCREMENT=0;
-
-
-INSERT INTO categorys  (name, id_news)
-VALUES('Hearthstone', 1);
-
-INSERT INTO categorys  (name, id_news)
-VALUES('Overwatch', 2);
-
-INSERT INTO categorys  (name, id_news)
-VALUES('Warcraft', 3);
-
-INSERT INTO categorys  (name, id_news)
-VALUES('Diablo', 4);
-
-INSERT INTO categorys  (name, id_news)
-VALUES('Warcraft', 5);
-
-INSERT INTO categorys  (name, id_news)
-VALUES('Другие игры', 6);
-
-INSERT INTO categorys  (name, id_news)
-VALUES('Warcraft', 7);
-
-INSERT INTO categorys  (name, id_news)
-VALUES('Diablo', 8);
-
-INSERT INTO categorys  (name, id_news)
-VALUES('Diablo', 9);
 
 
 -- 1

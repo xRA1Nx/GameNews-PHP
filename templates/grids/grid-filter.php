@@ -7,9 +7,9 @@
 
   <?php
   require './templates/configs/db_connect.php';
-  $query = "SELECT news.id, news.id_author, news.title, news.date_time, news.post_description, news.main_img, news.small_img , categorys.id_news, categorys.name
+  $query = "SELECT news.id, news.id_author, news.title, news.date_time, news.post_description, news.main_img, news.small_img, news.id_category, categorys.name
   FROM news, categorys 
-  WHERE news.id = categorys.id_news and categorys.name = '$_GET[name]'
+  WHERE news.id_category = categorys.id AND categorys.name = '$_GET[name]'
   ORDER BY id DESC";
   $query_res = $pdo->query($query);
 
