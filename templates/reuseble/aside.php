@@ -21,7 +21,7 @@
 
   while ($news_row = $query_res->fetch()) {
     //получаем ник пользователя
-    $query_author = "SELECT nickname FROM users where id = $news_row[id_author]";
+    $query_author = "SELECT nickname FROM users WHERE id = $news_row[id_author]";
     $nick_name = $pdo->query($query_author)->fetch()['nickname'];
 
     //

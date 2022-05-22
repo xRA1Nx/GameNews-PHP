@@ -10,8 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
   $query_comments = "SELECT COUNT(id_news) AS comments_count FROM comments where id_news = $_GET[id]";
   $comments_count = $pdo->query($query_comments)->fetch()['comments_count'];
   $category = $post["id_category"];
-  // $category = $pdo->query("SELECT id FROM categorys WHERE  id_news =  $_GET[id]")->fetch()["id"];
-  $users_categorys = $pdo->query("SELECT id_category FROM users_categorys WHERE id_user = $_SESSION[id]")->fetchall();
 
 ?>
 <!-- POST ACTIONS -->
@@ -22,18 +20,23 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
         <?php
           echo "$post[title] </p>";
 
-          if (isset($_SESSION['email']) and !in_fetch_array($users_categorys, "id_category", $category)) {
+          if (isset($_SESSION['email'])) {
+            $users_categorys = $pdo->query("SELECT id_category FROM users_categorys WHERE id_user = $_SESSION[id]")->fetchall();
+            echo '<nav nav class="post-actions">';
+            echo '<div>';
 
-            if (isset($_SESSION['email'])) {
+            if (!in_fetch_array($users_categorys, "id_category", $category)) {
 
               echo <<< SUBSCRIBE
-            <nav nav class="post-actions">
+           
             <a class="post-actions-link describ-link"
           href="./subscribe.php?id_category=$post[id_category] & id_user=$_SESSION[id]
           & action=add& post_id=$_GET[id] ">Подписаться</a>
-             <ul class="post-actions-list">
+             
   SUBSCRIBE;
             }
+            echo '</div>';
+            echo '<ul class="post-actions-list">';
             // Только для пользователей с правами - АВТОР
             if (isset($_SESSION['email']) and is_author()) {
               echo <<< NAV
