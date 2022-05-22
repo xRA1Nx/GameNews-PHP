@@ -21,11 +21,15 @@
 
     echo <<<HTML
     <div class='main-news'>
-    <a class='post-link' href='./post.php'>
-    <div class='img-container'>
-    <img class='news-img' src='$news_row[small_img]' alt='news image'/>
-    </div>
-    <h2 class='h2-news news-default-setings'> $news_row[title]</h2></a>
+
+      <a class='post-link' href='./post.php?id=$news_row[id]'>
+        <div class='img-container'>
+          <img class='news-img' src='$news_row[small_img]' alt='news image'/>
+          </div>
+          <h2 class='h2-news news-default-setings'> $news_row[title]</h2>
+      </a>
+    
+
     <p class='news-container'>$news_row[post_description]</p>
       <div class="post-footer">
       <div class="footer-post-details">

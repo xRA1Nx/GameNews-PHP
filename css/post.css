@@ -80,7 +80,7 @@
 .post-author-conteiner-content,
 .post-author-conteiner-link:link,
 .post-author-conteiner-link:visited {
-  color: #b77a11;
+  color: #92620e;
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 2.4rem;
@@ -153,7 +153,7 @@
 .comment-user-nick {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #b77a11;
+  color: #92620e;
 }
 
 .comment-user-nick span {
@@ -169,7 +169,7 @@
 .post .post-actions-link:link,
 .post .post-actions-link:visited {
   /* position: absolute; */
-  color: #b77a11;
+  color: #92620e;
   /* bottom: 0.8rem;
   right: 0; */
   font-size: 1rem;

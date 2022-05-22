@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 include "./templates/reuseble/head.php";
 if (isset($_SESSION['email']) and is_author()) : ?>
 
@@ -20,10 +20,6 @@ if (isset($_SESSION['email']) and is_author()) : ?>
       include "./templates/forms/create-form.php";
       // PUT YOUR SECTION HERE
 
-
-
-      // aside
-      // include "./templates/reuseble/aside.php";
       ?>
   </main>
 

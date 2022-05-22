@@ -1,8 +1,9 @@
-<section class="white-section">
-  <div class="forms-box">
-    <h1 class="h1-white h1-white-margin-b">
-      Внимание!!! Данная новость будет удалена !!!
-    </h1>
-    <h3><a href="#">Удалить?</a></h3>
+<?php
+// require './templates/configs/db_connect.php';
+require '../configs/db_connect.php';
 
-</section>
+echo $_GET["id"];
+$query = "DELETE FROM news WHERE id = ?";
+$del_prepare = $pdo->prepare($query);
+$del_prepare->execute([$_GET["id"]]);
+header("location:../../index.php");

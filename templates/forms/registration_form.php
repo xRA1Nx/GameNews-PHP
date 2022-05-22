@@ -1,5 +1,5 @@
 <section class="white-section-100">
-  <?php
+    <?php
 
 
     if (isset($_SESSION['email'])) {

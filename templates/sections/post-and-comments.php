@@ -1,9 +1,20 @@
+<?php
+$post_query = "SELECT id_author,  title, text, main_img, date_time 
+FROM news WHERE id = $_GET[id]";
+$post = $pdo->query($post_query)->fetch();
+$query_author = "SELECT nickname FROM users where id = $post[id_author]";
+$nick_name = $pdo->query($query_author)->fetch()['nickname'];
+$date_time = date_format(date_create($post['date_time']), 'd.m.Y H:i');
+$query_comments = "SELECT COUNT(id_news) AS comments_count FROM comments where id_news = $_GET[id]";
+$comments_count = $pdo->query($query_comments)->fetch()['comments_count'];
+
+?>
+
 <section class="white-section">
   <div class="post">
     <h1 class="h1-postnews-title h1-white">
       <p>
-        WARCRAFT ARCLIGHT RUMBLE: НОВАЯ МОБИЛЬНАЯ ИГРА ОТ BLIZZARD
-        ENTERTAINMENT
+        <?php echo $post['title'] ?>
       </p>
       <nav class="post-actions">
         <a class="post-actions-link describ-link" href="./subscriptions.php">Подписаться</a>
@@ -15,14 +26,14 @@
                 <li>
                   <a
                     class="post-actions-link post-actions-link-red"
-                    href="./create.php"
+                    href="./create.php?id=$_GET[id]"
                     >Редактировать</a
                   >
                 </li>
                 <li>
                   <a
                     class="post-actions-link post-actions-link-red"
-                    href="./post-del.php"
+                    href="./post-del.php?id=$_GET[id]"
                     >Удалить</a
                   >
                 </li>
@@ -38,56 +49,21 @@ NAV;
     <div class="post-author-conteiner">
       <p>
         <span class="post-author-conteiner-label">АВТОР</span>
-        <a class="post-author-conteiner-link" href="#">xRA1Nx</a>
+        <span class="post-author-conteiner-content"><?php echo $nick_name ?></span>
       </p>
 
       <p>
         <span class="post-author-conteiner-label">ОПУБЛИКОВАНО</span>
-        <span class="post-author-conteiner-content">03/05/22 22:36</span>
+        <span class="post-author-conteiner-content"><?php echo $date_time ?></span>
       </p>
       <p>
         <span class="post-author-conteiner-label">КОММЕНТАРИИ</span>
-        <span class="post-author-conteiner-content">22</span>
+        <span class="post-author-conteiner-content"><?php echo $comments_count ?></span>
       </p>
     </div>
-    <img class="post-main-img" src="./imgs/Posts/post-001.jpg" alt="POST big Img" />
+    <img class="post-main-img" src="<?php echo $post['main_img'] ?>" alt="POST big Img" />
     <p class="post-text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia
-      cum dicta fugiat dolores unde inventore? Cumque excepturi quo, earum
-      vitae veritatis ipsa non voluptates dolor error quaerat nam illum
-      eius, voluptate saepe expedita nobis consectetur! Maxime doloribus
-      labore similique! Exercitationem, dicta? Eius error, alias vitae ad
-      natus distinctio unde. Eligendi magni doloribus unde ipsum sint
-      facilis quae dolor nihil adipisci nostrum error molestiae deserunt
-      vero, neque, maxime dolore cumque recusandae necessitatibus ratione
-      quibusdam officiis voluptatibus perferendis voluptatum accusamus!
-      Odit, quo laudantium. Officiis laborum dignissimos porro at
-      quibusdam asperiores velit dicta incidunt, veniam amet eveniet
-      nesciunt assumenda inventore, nulla eius qui saepe possimus magnam
-      et? Earum tempore eos ducimus officia laborum aspernatur nihil odit
-      sint dolores, tempora nam! Veritatis, tenetur quibusdam! Dolores ad
-      dicta ratione odit repudiandae harum nesciunt reprehenderit ex optio
-      exercitationem totam obcaecati corrupti, quam in beatae explicabo
-      vitae distinctio neque expedita consequatur quidem est doloribus
-      voluptatem voluptas! Fuga aspernatur iste facilis at porro et rerum,
-      reiciendis explicabo tempore accusamus. Id iste minima inventore
-      nisi quisquam atque deserunt illum enim, autem corrupti itaque est
-      temporibus sit non laborum provident doloribus similique molestias
-      ea commodi accusantium consectetur labore magnam! Laborum, suscipit
-      possimus voluptatibus doloribus cumque similique totam aut quasi.
-      Quisquam excepturi soluta quidem. Non maxime molestias possimus
-      perspiciatis recusandae, amet sequi molestiae quasi similique,
-      voluptatibus qui aspernatur doloremque eum officia ab. Asperiores
-      veritatis eaque quis placeat, minima architecto facilis quibusdam
-      voluptatem eveniet amet. Facere veritatis, nam perspiciatis
-      repudiandae impedit architecto dicta aut, error qui quae assumenda,
-      culpa quia. Quos expedita impedit ipsa hic quidem dolore, totam
-      harum eius dolores vitae minus saepe minima temporibus magnam sit
-      fuga incidunt? Id, iusto cupiditate harum delectus, consectetur
-      aliquam ab ipsam debitis numquam voluptatem nulla, distinctio eaque
-      expedita vero? Culpa facere perspiciatis nesciunt eligendi ad
-      repudiandae voluptates distinctio ullam quisquam necessitatibus!
-      Repudiandae, suscipit fugiat?
+      <?php echo $post['text'] ?>
     </p>
   </div>
   <div class="discussion-conteiner" id="comments">

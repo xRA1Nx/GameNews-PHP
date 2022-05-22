@@ -2,12 +2,13 @@
   <div class="forms-box">
 
     <?php
-
-    require './templates/configs/db_connect.php';
     require './templates/functions/arrays_fns.php';
+    $post_query = "SELECT id_author,  post_description, text, main_img 
+FROM news WHERE id = 9";
+    $post = $pdo->query($post_query)->fetch();
 
 
-    var_dump(isset($_SESSION['email']) and is_author());
+    show_array($post)
 
 
     // $user_query = "SELECT id, email, fname, lname, nickname, avatar 

@@ -1,6 +1,6 @@
 <?php
 include "./templates/reuseble/head.php";
-if (isset($_SESSION['email']) and is_author()) : ?>
+if (isset($_SESSION['email']) and is_author() and isset($_GET['id'])) : ?>
 <title>Games Portal</title>
 </head>
 
@@ -11,7 +11,7 @@ if (isset($_SESSION['email']) and is_author()) : ?>
 
     <?php
       // PUT YOUR SECTION HERE
-      include "./templates/sections/post-del.php";
+      include "./templates/sections/confirm-post-del-section.php";
       // PUT YOUR SECTION HERE
 
 

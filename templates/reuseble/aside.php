@@ -2,7 +2,7 @@
   <div class='hot-watched-discussed'>
     <p>
       <a class="link-hwd link-hot-disscused" href="#">Top обсуждаемые</a>
-      <a class="link-hwd link-hot-watched" href="#">Top просмотров</a>
+      <!-- <a class="link-hwd link-hot-watched" href="#">Top просмотров</a> -->
     </p>
   </div>
 
@@ -31,11 +31,11 @@
 
     echo <<<HTML
       <div class="main-news">
-      <a class='post-link' href='./post.php'>
+      <a class='post-link' href='./post.php?id=$news_row[id]'>
       <div class='img-container'>
       <img class='news-img' src='$news_row[small_img]' alt='news image'/>
       </div>
-      <h2 class='h2-news news-default-setings'> $news_row[title]</h2></a>
+      <h2 class='h2-news news-default-setings'>$news_row[title]</h2></a>
             </div>
   HTML;
   }
