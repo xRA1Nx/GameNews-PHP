@@ -24,14 +24,16 @@ id_author BIGINT NOT NULL,
 title VARCHAR(80)  NOT NULL,
 post_description TEXT NOT NULL CHECK (CHAR_LENGTH(post_description) <=320),
 text TEXT NOT NULL,
-main_img  VARCHAR(255),
-small_img VARCHAR(255) NOT NULL,
+main_img  TEXT NOT NULL CHECK (CHAR_LENGTH(post_description) <=500),
+small_img TEXT NOT NULL CHECK (CHAR_LENGTH(post_description) <=500),
 
 FOREIGN KEY(id_author) REFERENCES authors(id) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS comments(
 id INT AUTO_INCREMENT PRIMARY KEY,
+date_time TIMESTAMP DEFAULT NOW(),
+
 id_news BIGINT NOT NULL, 
 id_user BIGINT NOT NULL,
 text VARCHAR(50),

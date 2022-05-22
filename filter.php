@@ -14,7 +14,7 @@ include "./templates/reuseble/head.php"; ?>
   <main class="container container-main" id="main">
     <?php
     // grid 
-    include "./templates/grids/grid-diablo.php";
+    include "./templates/grids/grid-filter.php";
     // aside
     include "./templates/reuseble/aside.php";
     ?>

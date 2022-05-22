@@ -100,46 +100,52 @@ require './templates/configs/db_connect.php';
     <nav class="game-icons container">
       <ul class="nav-list game-icons-list">
         <li>
-          <a href="./filter.php">
+          <a href="./filter.php?name=diablo">
             <img class="game-icon icons" src="./imgs/icons/games/Diablo.svg" alt="diablo icon" />
           </a>
-          <a class="game-name" href="#">Diablo</a>
+          <a class="game-name" href="./filter.php?name=diablo">Diablo</a>
         </li>
+
         <li>
-          <a href="#">
+          <a href="./filter.php?name=Overwatch">
             <img class="game-icon icons" src="./imgs/icons/games/Overwatch.svg" alt="Overwatch icon" />
           </a>
-          <a href="#" class="game-name">Overwatch</a>
+          <a href="./filter.php?name=Overwatch" class="game-name">Overwatch</a>
         </li>
+
         <li>
-          <a href="#">
+          <a href="./filter.php?name=HoS">
             <img class="game-icon icons" src="./imgs/icons/games/Hots.svg" alt="Herous of the storm icon" />
           </a>
-          <a href="#" class="game-name">Herous of the storm</a>
+          <a href="./filter.php?name=Hos" class="game-name">Herous of the storm</a>
         </li>
+
         <li>
-          <a href="#">
+          <a href="./filter.php?name=Starcraft">
             <img class="game-icon icons" src="./imgs/icons/games/Starcraft_2.svg" alt="Starcraft 2 icon" />
           </a>
-          <a href="#" class="game-name">Starcraft</a>
+          <a href="./filter.php?name=Starcraft" class="game-name">Starcraft</a>
         </li>
+
         <li>
-          <a href="#">
+          <a href="./filter.php?name=Hearthstone">
             <img class="game-icon icons" src="./imgs/icons/games/Hearthstone.svg" alt="Hearthstone icon" />
           </a>
-          <a href="#" class="game-name">Hearthstone</a>
+          <a href="./filter.php?name=Hearthstone" class="game-name">Hearthstone</a>
         </li>
+
         <li>
-          <a href="#">
+          <a href="./filter.php?name=Warcraft">
             <img class="game-icon icons" src="./imgs/icons/games/WoW.svg" alt="World of Warcraft icon" />
           </a>
-          <a href="#" class="game-name">World of Warcraft</a>
+          <a href="./filter.php?name=Warcraft" class="game-name">World of Warcraft</a>
         </li>
+
         <li>
-          <a href="#">
+          <a href="./filter.php?name=Другие игры">
             <img class="game-icon icons" src="./imgs/icons/games/Other_Games.svg" alt="Other Games" />
           </a>
-          <a href="#" class="game-name">Другие игры</a>
+          <a href="./filter.php?name=Другие игры" class="game-name">Другие игры</a>
         </li>
       </ul>
     </nav>

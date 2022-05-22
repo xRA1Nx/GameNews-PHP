@@ -1,4 +1,5 @@
 <?php // head 
+ob_start();
 include "./templates/reuseble/head.php"; ?>
 
 <title>Games Portal</title>

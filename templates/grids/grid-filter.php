@@ -9,9 +9,11 @@
   require './templates/configs/db_connect.php';
   $query = "SELECT news.id, news.id_author, news.title, news.date_time, news.post_description, news.main_img, news.small_img , categorys.id_news, categorys.name
   FROM news, categorys 
-  WHERE news.id = categorys.id_news and categorys.name = 'diablo'
+  WHERE news.id = categorys.id_news and categorys.name = '$_GET[name]'
   ORDER BY id DESC";
   $query_res = $pdo->query($query);
+
+  // echo count($rows_count);
   while ($news_row = $query_res->fetch()) {
     //получаем ник пользователя
     $query_author = "SELECT nickname FROM users where id = $news_row[id_author]";
@@ -24,7 +26,7 @@
 
     echo <<<HTML
     <div class='main-news'>
-    <a class='post-link' href='./post.php'>
+    <a class='post-link'  href='./post.php?id=$news_row[id]'>
     <div class='img-container'>
     <img class='news-img' src='$news_row[small_img]' alt='news image'/>
     </div>
@@ -40,9 +42,11 @@
         <a class="link-comment-count" href="#">$comments_count</a>
       </div>
     </div>
-  </div>
+ </div>
 HTML;
   }
+  $rows_count = count($query_res->fetchall(PDO::FETCH_ASSOC));
+  if ($rows_count >= 9) {
   ?>
 
 
@@ -70,4 +74,5 @@ HTML;
       </svg>
     </button>
   </div>
+  <?php } ?>
 </section>
