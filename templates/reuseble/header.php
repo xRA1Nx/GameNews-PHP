@@ -1,7 +1,6 @@
 <?php
 require './templates/configs/db_connect.php';
 
-
 ?>
 
 
@@ -53,41 +52,42 @@ require './templates/configs/db_connect.php';
             <?php
             if (isset($_SESSION['email'])) { ?>
 
-              <li>
-                <a class="need-to-autorized" href="./lk.php">Личный кабинет</a>
-                <ion-icon class="nav-bar-ion-icon" name="person-circle-outline"></ion-icon>
-              </li>
+            <li>
+              <a class="need-to-autorized" href="./lk.php">Личный кабинет</a>
+              <ion-icon class="nav-bar-ion-icon" name="person-circle-outline"></ion-icon>
+            </li>
 
-              <?php if (is_author()) : ?>
-                <li>
-                  <a class="need-to-autorized" href="./create.php">Написать статью</a>
-                  <ion-icon class="nav-bar-ion-icon" name="create-outline"></ion-icon>
-                </li>
-              <?php endif ?>
+            <?php if (is_author()) : ?>
+            <li>
+              <a class="need-to-autorized" href="./create.php">Написать статью</a>
+              <ion-icon class="nav-bar-ion-icon" name="create-outline"></ion-icon>
+            </li>
+            <?php endif ?>
 
-              <li>
-                <a class="need-to-autorized" href="./exit.php">Выйти</a>
-                <ion-icon class="nav-bar-ion-icon" name="log-out-outline"></ion-icon>
-              </li>
+            <li>
+              <a class="need-to-autorized" href="./exit.php">Выйти</a>
+              <ion-icon class="nav-bar-ion-icon" name="log-out-outline"></ion-icon>
+            </li>
             <?php } else { ?>
-              <li>
-                <a class="need-to-autorized" href="./sign-in.php">Войти</a>
-                <ion-icon class="nav-bar-ion-icon" name="log-in-outline"></ion-icon>
-              </li>
-              <li>
-                <a class="need-to-autorized" href="./registration.php">Регистрация</a>
-                <ion-icon class="nav-bar-ion-icon" name="person-add-outline"></ion-icon>
-              </li>
-
+            <li>
+              <a class="need-to-autorized" href="./sign-in.php">Войти</a>
+              <ion-icon class="nav-bar-ion-icon" name="log-in-outline"></ion-icon>
+            </li>
+            <li>
+              <a class="need-to-autorized" href="./registration.php">Регистрация</a>
+              <ion-icon class="nav-bar-ion-icon" name="person-add-outline"></ion-icon>
+            </li>
         </nav>
-      <?php } ?>
-      </ul>
-      <form class="header-form-search">
-        <input type="text" placeholder="ПОИСК" class="header-input-search" />
-        <button class="header-input-submit">
-          <img src="./imgs/icons/search.svg" class="header-img-search" alt="search icon" />
-        </button>
-      </form>
+
+        <?php }
+            // **********************ФОРМА**************************
+      ?>
+        </ul>
+        <form class="header-form-search" method="post" action="filter.php">
+          <input name="contains" type="text" placeholder="ПОИСК" class="header-input-search" />
+          <button class="header-input-submit">
+            <img src="./imgs/icons/search.svg" class="header-img-search" alt="search icon" />
+        </form>
       </div>
     </div>
   </div>

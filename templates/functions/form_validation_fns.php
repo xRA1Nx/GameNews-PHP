@@ -425,3 +425,8 @@ function get_post_and_category($id)
     $post = $pdo->query($post_query)->fetch();
     return $post;
 }
+
+// function search($error, $input){
+//     $method = $_SERVER['REQUEST_METHOD'];
+//     $method === "POST" ? $input = htmlspecialchars(trim($_POST['first_name'])) : $input['first_name'] = "";
+// }

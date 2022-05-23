@@ -7,11 +7,26 @@
 
   <?php
   require './templates/configs/db_connect.php';
-  $query = "SELECT news.id, news.id_author, news.title, news.date_time, news.post_description, news.main_img, news.small_img, news.id_category, categorys.name
+  require './templates/functions/arrays_fns.php';
+  // Если запрос POST то фильтруем по поиску
+  if (($_SERVER['REQUEST_METHOD'] === 'POST')) {
+    $query = "SELECT news.id, news.id_author, news.title, news.date_time, news.post_description, news.main_img, news.small_img, news.id_category, categorys.name
+  FROM news, categorys 
+  WHERE  news.id_category = categorys.id AND (news.text LIKE '%$_POST[contains]%' OR news.post_description LIKE '%$_POST[contains]%' OR news.title LIKE '%$_POST[contains]%') 
+  ORDER BY id DESC";
+
+    // если запрос GET, то фильтруем по категориям
+  } else {
+    if (!isset($_GET['name'])) {
+      header("location:index.php");
+    }
+    $query = "SELECT news.id, news.id_author, news.title, news.date_time, news.post_description, news.main_img, news.small_img, news.id_category, categorys.name
   FROM news, categorys 
   WHERE news.id_category = categorys.id AND categorys.name = '$_GET[name]'
   ORDER BY id DESC";
+  }
   $query_res = $pdo->query($query);
+  // show_array($query_res->fetchall(PDO::FETCH_ASSOC));
 
   // echo count($rows_count);
   while ($news_row = $query_res->fetch()) {
