@@ -1,4 +1,7 @@
-<?php if (isset($_SESSION['email'])) : ?>
+<?php if (isset($_SESSION['email'])) :
+  // include "./templates/functions/arrays_fns.php";
+  // show_array($_SESSION);
+?>
 
 
 <section class="white-section-100">
@@ -41,6 +44,7 @@
 
       </div>
     </div>
+
 
     <!-- Подписки -->
     <main class="profile-main">
@@ -101,8 +105,8 @@ ROW;
               $query = "UPDATE users SET lname = '$_POST[lname]' WHERE id = ?";
               $prepare_upd = $pdo->prepare($query);
               $prepare_upd->execute([$_SESSION['id']]);
-              session_unset();
-              header("location:sign-in.php");
+              $_SESSION['lname'] = $_POST['lname'];
+              header("location:./lk.php");
             }
           }
           echo <<<FORM
@@ -132,8 +136,8 @@ ROW;
               $query = "UPDATE users SET fname = '$_POST[fname]' WHERE id = ?";
               $prepare_upd = $pdo->prepare($query);
               $prepare_upd->execute([$_SESSION['id']]);
-              session_unset();
-              header("location:sign-in.php");
+              $_SESSION['fname'] = $_POST['fname'];
+              header("location:./lk.php");
             }
           }
           echo <<<FORM
@@ -164,8 +168,8 @@ ROW;
               $query = "UPDATE users SET avatar = '$_POST[ava]' WHERE id = ?";
               $prepare_upd = $pdo->prepare($query);
               $prepare_upd->execute([$_SESSION['id']]);
-              session_unset();
-              header("location:sign-in.php");
+              $_SESSION['avatar'] = $_POST['ava'];
+              header("location:./lk.php");
             }
           }
           echo <<<FORM
@@ -186,8 +190,8 @@ FORM;
           $query = "UPDATE users SET avatar = default WHERE id = ?";
           $prepare_upd = $pdo->prepare($query);
           $prepare_upd->execute([$_SESSION['id']]);
-          session_unset();
-          header("location:sign-in.php");
+          $_SESSION['avatar'] = "./imgs/ava-default.svg";
+          header("location:./lk.php");
         }
 
         //меняем nickname
@@ -207,8 +211,8 @@ FORM;
               $query = "UPDATE users SET nickname = '$_POST[nick]' WHERE id = ?";
               $prepare_upd = $pdo->prepare($query);
               $prepare_upd->execute([$_SESSION['id']]);
-              session_unset();
-              header("location:sign-in.php");
+              $_SESSION['nickname'] = $_POST['nick'];
+              header("location:./lk.php");
             }
           }
           echo <<<FORM

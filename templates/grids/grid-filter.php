@@ -41,11 +41,15 @@
 
     echo <<<HTML
     <div class='main-news'>
-    <a class='post-link'  href='./post.php?id=$news_row[id]'>
-    <div class='img-container'>
-    <img class='news-img' src='$news_row[small_img]' alt='news image'/>
-    </div>
-    <h2 class='h2-news news-default-setings'> $news_row[title]</h2></a>
+
+      <a class='post-link' href='./post.php?id=$news_row[id]'>
+        <div class='img-container'>
+          <img class='news-img' src='$news_row[small_img]' alt='news image'/>
+          </div>
+          <h2 class='h2-news news-default-setings'> $news_row[title]</h2>
+      </a>
+    
+
     <p class='news-container'>$news_row[post_description]</p>
       <div class="post-footer">
       <div class="footer-post-details">
@@ -54,12 +58,14 @@
       </div>
       <div class="footer-comment-details">
         <img class="icon comment-icon" src="./imgs/Comments.svg" alt="comment icon" />
-        <a class="link-comment-count" href="#">$comments_count</a>
-      </div>
-    </div>
- </div>
 HTML;
-  }
+  ?>
+  <?php echo "<a class='link-comment-count' href='./post.php?id=$news_row[id]#form-comments'>$comments_count</a>"; ?>
+  </div>
+  </div>
+  </div>
+
+  <?php }
   $rows_count = count($query_res->fetchall(PDO::FETCH_ASSOC));
   if ($rows_count >= 9) {
   ?>
