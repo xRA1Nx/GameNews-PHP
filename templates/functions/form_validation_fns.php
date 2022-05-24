@@ -154,6 +154,7 @@ function show_reg_form($errors = [], $input = [])
                           
                 <input class="inp-submit" type="submit" value="Зарегистрироваться">      
             </form> 
+            </div>
 
 _HTML_;
 }
@@ -254,6 +255,7 @@ function show_signin_form($errors = [], $input = [])
   
         <input class="inp-submit" type="submit" value="Войти">
       </form>
+      </div>
   </section>
  
   
@@ -379,20 +381,20 @@ function show_creat_form($errors = [], $input = [])
 
       <div>
         <label for="post_img_url">Основная картинка:</label  <span>$errors[post_img_url]</span><br>
-        <input type="url" name="post_img_url" id="post_img_url" placeholder="ссылка на вашу картинку" value="$input[post_img_url]" size=50>
+        <input type="url" name="post_img_url" id="post_img_url" placeholder="ссылка на вашу картинку" value="$input[post_img_url]">
       
       </div>
 
       <div>
         <label for="news_img_url">доп. картинка:</label><span>$errors[news_img_url]</span><br>
-        <input type="url" name="news_img_url" id="news_img_url" placeholder="ссылка на вашу картинку" value="$input[news_img_url]" size=50>
+        <input type="url" name="news_img_url" id="news_img_url" placeholder="ссылка на вашу картинку" value="$input[news_img_url]" >
         
       </div>
 
       <div>
         <label for="post_title">Заголовок:</label>  <span>$errors[post_title]</span><br>
         <input class="inp" type="text" name="post_title" id="post_title" placeholder="не более 80 символов"
-          value="$input[post_title]" size=50>
+          value="$input[post_title]" >
       
       </div>
 
@@ -410,6 +412,7 @@ function show_creat_form($errors = [], $input = [])
 
       <input class="inp-submit" type="submit" value="разместить">
     </form>
+    </div>
 
 _HTML_;
 }
@@ -425,8 +428,3 @@ function get_post_and_category($id)
     $post = $pdo->query($post_query)->fetch();
     return $post;
 }
-
-// function search($error, $input){
-//     $method = $_SERVER['REQUEST_METHOD'];
-//     $method === "POST" ? $input = htmlspecialchars(trim($_POST['first_name'])) : $input['first_name'] = "";
-// }

@@ -1,6 +1,6 @@
 <?php // head 
 ob_start();
-include "./templates/reuseble/head.php"; ?>
+require "./templates/reuseble/head.php"; ?>
 
 <title>Games Portal</title>
 </head>
@@ -8,21 +8,21 @@ include "./templates/reuseble/head.php"; ?>
 <body>
 
   <?php  // header
-  include "./templates/reuseble/header.php"; ?>
+  require "./templates/reuseble/header.php"; ?>
 
 
   <main class="container container-main" id="main">
     <?php
     // grid 
-    include "./templates/grids/grid-filter.php";
+    require "./templates/grids/grid-filter.php";
     // aside
-    include "./templates/reuseble/aside.php";
+    require "./templates/reuseble/aside.php";
     ?>
   </main>
 
 
   <?php  // footer
-  include "./templates/reuseble/footer.php"; ?>
+  require "./templates/reuseble/footer.php"; ?>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script defer src="./scripts/script.js"></script>

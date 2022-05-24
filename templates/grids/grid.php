@@ -6,7 +6,6 @@
 
 
   <?php
-  require './templates/configs/db_connect.php';
   $query = "SELECT id, id_author, title, date_time, post_description, main_img, small_img FROM news ORDER BY id DESC";
   $query_res = $pdo->query($query);
   while ($news_row = $query_res->fetch()) {
@@ -49,7 +48,8 @@ HTML;
 
   <div class="pagination">
     <button class="btn-pag btn-pag-left" aria-label="previous-page button">
-      <svg xmlns="http://www.w3.org/2000/svg" class="pag-btn-icon icon-left" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" alt="previous-page icon">
+      <svg xmlns="http://www.w3.org/2000/svg" class="pag-btn-icon icon-left" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2" alt="previous-page icon">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
       </svg>
     </button>
@@ -64,7 +64,8 @@ HTML;
     <a href="#" class="pag-link">23</a>
 
     <button class="btn-pag btn-pag-right" aria-label="next-page button">
-      <svg xmlns="http://www.w3.org/2000/svg" class="pag-btn-icon icon-right" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="pag-btn-icon icon-right" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" alt="next-page icon" />
       </svg>
     </button>

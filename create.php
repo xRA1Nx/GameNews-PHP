@@ -1,6 +1,6 @@
 <?php
 ob_start();
-include "./templates/reuseble/head.php";
+require "./templates/reuseble/head.php";
 if (isset($_SESSION['email']) and is_author()) : ?>
 
 
@@ -12,12 +12,12 @@ if (isset($_SESSION['email']) and is_author()) : ?>
 
 <body>
   <?php   //header
-    include "./templates/reuseble/header.php"; ?>
+    require "./templates/reuseble/header.php"; ?>
   <main class="container container-white" id="main">
 
     <?php
       // PUT YOUR SECTION HERE
-      include "./templates/forms/create-form.php";
+      require "./templates/forms/create-form.php";
       // PUT YOUR SECTION HERE
 
       ?>
@@ -25,7 +25,7 @@ if (isset($_SESSION['email']) and is_author()) : ?>
 
 
   <?php  // footer
-    include "./templates/reuseble/footer.php"; ?>
+    require "./templates/reuseble/footer.php"; ?>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script defer src="./scripts/script.js"></script>

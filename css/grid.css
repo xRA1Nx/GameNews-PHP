@@ -28,7 +28,7 @@
 }
 
 /***************************/
-/* NEWS FOOTER */
+/* NEWS HEADER */
 /***************************/
 .main-header {
   display: flex;
@@ -85,7 +85,7 @@
 }
 
 /***************************/
-/* NEWS BODY */
+/* NEWS FOOTER */
 /***************************/
 .post-footer {
   display: flex;
@@ -101,7 +101,7 @@
 }
 
 .news-img {
-  transition: all 0.2s;
+  transition: all 0.4s;
   display: block;
   width: 100%;
 }

@@ -86,6 +86,7 @@ main {
 a:link,
 a:visited {
   cursor: pointer;
+  transition: all 0.3s;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.66);
 }
@@ -179,8 +180,13 @@ a:visited {
   cursor: pointer;
 }
 
+.white-section .inp-submit:link,
+.white-section .inp-submit:visited {
+  color: #fff;
+}
+
 .h1-white {
-  font-size: 3.4rem;
+  font-size: 3rem;
   line-height: 1.1;
   padding-top: 2.4rem;
   border-bottom: 0.1rem solid #d9d9d9;
@@ -218,86 +224,3 @@ a:visited {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto;
 } */
-
-/***************************/
-/* USERS PROFILE */
-/***************************/
-.lk-box {
-  font-size: 1.4rem;
-  line-height: 1.4;
-  color: #444;
-}
-
-.profile {
-  display: flex;
-  gap: 4.8rem;
-  align-items: center;
-}
-.profile-avatar {
-  display: block;
-  width: 8rem;
-  height: 8rem;
-}
-
-/* .chancge-ava:link,
-.chancge-ava:visited {
-  margin-bottom: 3.2rem;
-} */
-
-.get-premium {
-  margin: 3.2rem 0;
-}
-
-.subscriptions-list {
-  display: grid;
-  grid-column: 1fr 1fr;
-  row-gap: 1.2rem;
-}
-
-.subscriptions-list span {
-  display: block;
-  padding: 0rem 0.6rem;
-  background-color: #b77a11;
-  border-radius: 7px;
-  color: #fff;
-}
-
-.subscriptions-list li {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  font-size: 1.4rem;
-  font-weight: 600rem;
-  gap: 1.2rem;
-}
-
-.subsribtions-title {
-  font-weight: 500;
-  font-size: 1.8rem;
-  font-weight: 500rem;
-}
-
-.get-premium a:link,
-.get-premium a:visited {
-  color: #b77a11;
-  text-decoration: none;
-  transition: all 0.5s;
-  font-size: 1.6rem;
-}
-
-.get-premium a:active,
-.get-premium a:hover {
-  text-decoration: underline;
-}
-
-.lk-box .exit-link:link,
-.lk-box .exit-link:visited {
-  font-size: 1.6rem;
-  color: red;
-  transition: all 0.5s;
-}
-
-.lk-box .exit-link:active,
-.lk-box .exit-link:hover {
-  text-decoration: underline;
-}

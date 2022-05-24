@@ -137,6 +137,10 @@ header {
   transform: translateX(-100%);
 }
 
+.icon {
+  transition: all 0.2s;
+}
+
 .nav-menu-icons {
   display: block;
   height: 2.8rem;
