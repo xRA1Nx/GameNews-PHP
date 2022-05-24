@@ -1,52 +1,52 @@
 <?php if (isset($_SESSION['email'])) : ?>
 
 
-  <section class="white-section-100">
-    <div class="lk-box">
+<section class="white-section-100">
+  <div class="lk-box">
 
 
-      <?php if (!isset($_GET["profile-action"])) { ?>
+    <?php if (!isset($_GET["profile-action"])) { ?>
 
-        <h1 class="h1-white h1-white-margin-b">Личный кабинет</h1>
-        <div class=user-data>
-          <div class="user-avatar">
-            <img class="user-avatar-img" src="<?php echo $_SESSION['avatar'] ?> ">
-            <nav>
-              <a href="./lk.php?profile-action=edit-ava">изменить</a>
-              <a href="./lk.php?profile-action=del-ava">удалить</a>
-            </nav>
-          </div>
+    <h1 class="h1-white h1-white-margin-b">Личный кабинет</h1>
+    <div class=user-data>
+      <div class="user-avatar">
+        <img class="user-avatar-img" src="<?php echo $_SESSION['avatar'] ?> ">
+        <nav>
+          <a href="./lk.php?profile-action=edit-ava">изменить</a>
+          <a href="./lk.php?profile-action=del-ava">удалить</a>
+        </nav>
+      </div>
 
-          <div class="user-info">
-            <p> <strong>Фамилия</strong>: <?php echo $_SESSION['lname'] ?>
-              <a href="./lk.php?profile-action=edit-lname">изменить</a>
-            </p>
-            <p><strong>Имя:</strong> <?php echo $_SESSION['fname'] ?>
-              <a href="./lk.php?profile-action=edit-fname">изменить</a>
-            </p>
-            <p><strong>Эл. почта:</strong> <?php echo $_SESSION['email'] ?>
-              <a href="./lk.php?profile-action=edit-email">изменить</a>
-            </p>
-            <p><strong>Псевдоним:</strong> <?php echo $_SESSION['nickname'] ?>
-              <a href="./lk.php?profile-action=edit-nick">изменить</a>
-            </p>
-            <p class=p-row-action>
-              <span class="profile-button">
-                <a href='./lk.php?profile-action=edit-pass'>сменить пароль</a>
-              </span>
-              <span class="profile-button exit-link">
-                <a href='exit.php'>Выйти</a>
-              </span>
-            </p>
+      <div class="user-info">
+        <p> <strong>Фамилия</strong>: <?php echo $_SESSION['lname'] ?>
+          <a href="./lk.php?profile-action=edit-lname">изменить</a>
+        </p>
+        <p><strong>Имя:</strong> <?php echo $_SESSION['fname'] ?>
+          <a href="./lk.php?profile-action=edit-fname">изменить</a>
+        </p>
+        <p><strong>Эл. почта:</strong> <?php echo $_SESSION['email'] ?>
+          <a href="./lk.php?profile-action=edit-email">изменить</a>
+        </p>
+        <p><strong>Псевдоним:</strong> <?php echo $_SESSION['nickname'] ?>
+          <a href="./lk.php?profile-action=edit-nick">изменить</a>
+        </p>
+        <p class=p-row-action>
+          <span class="profile-button">
+            <a href='./lk.php?profile-action=edit-pass'>сменить пароль</a>
+          </span>
+          <span class="profile-button exit-link">
+            <a href='exit.php'>Выйти</a>
+          </span>
+        </p>
 
-          </div>
-        </div>
+      </div>
+    </div>
 
-        <!-- Подписки -->
-        <main class="profile-main">
-          <div class="subsribtions">
-            <p class="subsribtions-title">Ваши подписки:</p>
-            <?php
+    <!-- Подписки -->
+    <main class="profile-main">
+      <div class="subsribtions">
+        <p class="subsribtions-title">Ваши подписки:</p>
+        <?php
             $query_cats = "SELECT id_category FROM users_categorys 
           WHERE id_user = '$_SESSION[id]'";
             $cats = $pdo->query($query_cats)->fetchall();
@@ -68,29 +68,30 @@ ROW;
             }
             echo '</ul>';
             ?>
-          </div>
+      </div>
 
 
-          <div class="profile-actions">
-            <!-- <a class="change-ava" href="#">сменить аватар</a> -->
-            <?php if (!is_author()) { ?>
-              <p class="profile-button">Для размещения и редактирования новостей нужны авторсие права <a href="./upgrade.php">
-                  Получить права</a></p>
-            <?php } ?>
-            <?php if (is_author()) { ?>
-              <p class="profile-button"><a href="./downgrade.php">Отказаться от авторских прав</a></p>
-            <?php } ?>
-          </div>
-        </main>
+      <div class="profile-actions">
+        <!-- <a class="change-ava" href="#">сменить аватар</a> -->
+        <?php if (!is_author()) { ?>
+        <p class="profile-button">Для размещения и редактирования новостей нужны авторсие права <a href="./upgrade.php">
+            Получить права</a></p>
+        <?php } ?>
+        <?php if (is_author()) { ?>
+        <p class="profile-button"><a href="./downgrade.php">Отказаться от авторских прав</a></p>
+        <?php } ?>
+      </div>
+    </main>
 
 
-      <?php } else { //  ДЕСТВИЯ НА ИЗМЕНЕНИЕ ДАННЫХ В ПРОФИЛЕ
+    <?php } else { //  ДЕСТВИЯ НА ИЗМЕНЕНИЕ ДАННЫХ В ПРОФИЛЕ
         //меняем фамилию
         if ($_GET["profile-action"] === "edit-lname") {
           echo '<h1 class="h1-white h1-white-margin-b">Изменение вашей фамилии</h1>';
           if ($_SERVER['REQUEST_METHOD'] === "GET") {
             $error = "";
           } else {
+            $_POST['lname'] = htmlspecialchars(trim($_POST['lname']));
             $reg_exp = "/^[а-яё]{2,}$/ui";
             if (mb_strlen($_POST['lname']) < 2) {
               $error = "Фамилия должно быть длинее 2х букв";
@@ -121,6 +122,7 @@ ROW;
           if ($_SERVER['REQUEST_METHOD'] === "GET") {
             $error = "";
           } else {
+            $_POST['fname'] = htmlspecialchars(trim($_POST['fname']));
             $reg_exp = "/^[а-яё]{2,}$/ui";
             if (mb_strlen($_POST['fname']) < 2) {
               $error = "Имя должно быть длинее 2х букв";
@@ -155,6 +157,7 @@ ROW;
           if ($_SERVER['REQUEST_METHOD'] === "GET") {
             $error = "";
           } else {
+            $_POST['ava'] = htmlspecialchars(trim($_POST['ava']));
             if (empty($_POST['ava'])) {
               $error = "укажите ссылку на ваш аватар";
             } else {
@@ -193,6 +196,7 @@ FORM;
           if ($_SERVER['REQUEST_METHOD'] === "GET") {
             $error = "";
           } else { // Если POST
+            $_POST['nick'] = htmlspecialchars(trim($_POST['nick']));
             require './templates/functions/arrays_fns.php';
             $query_res = $pdo->query("SELECT nickname FROM users")->fetchall();
             if (mb_strlen($_POST['nick']) < 5) {
@@ -225,6 +229,7 @@ FORM;
           if ($_SERVER['REQUEST_METHOD'] === "GET") {
             $error = "";
           } else { // Если POST
+            $_POST['email'] = htmlspecialchars(trim($_POST['email']));
             require './templates/functions/arrays_fns.php';
             $reg_exp = "/^.+@.+$/u";
             $query_res = $pdo->query("SELECT email FROM users")->fetchall();
@@ -261,7 +266,8 @@ FORM;
           if ($_SERVER['REQUEST_METHOD'] === "GET") {
             $error = "";
           } else {
-
+            $_POST['pass1'] = htmlspecialchars(trim($_POST['pass1']));
+            $_POST['pass2'] = htmlspecialchars(trim($_POST['pass2']));
             if (mb_strlen($_POST['pass1']) < 8) {
               $error = "пароль должен быть длинее 8 символов";
             } elseif ($_POST['pass1'] != $_POST['pass2']) {
@@ -289,12 +295,7 @@ FORM;
       } ?>
 
 
-
-
-
-
-
-      </main>
+    </main>
     <?php else : ?>
-      <?php header("location:index.php") ?>;
+    <?php header("location:index.php") ?>;
     <?php endif; ?>

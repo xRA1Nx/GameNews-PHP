@@ -2,7 +2,7 @@
 ob_start();
 require "./templates/reuseble/head.php"; ?>
 
-<title>Games Portal</title>
+<title>Поиск по статьям</title>
 </head>
 
 <body>

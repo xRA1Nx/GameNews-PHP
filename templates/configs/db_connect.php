@@ -12,5 +12,5 @@ try {
   // создать экземпляр класса PDO и положить его в переменную $pdo
   $pdo = new PDO("mysql:host=$host;dbname=$db_name", $log, $pass);
 } catch (Exception $e) {
-  echo "Ошибка подключения к БД";
+  die("Ошибка подключения к БД");
 }

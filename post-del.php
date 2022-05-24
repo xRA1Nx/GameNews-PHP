@@ -1,7 +1,7 @@
 <?php
 include "./templates/reuseble/head.php";
 if (isset($_SESSION['email']) and is_author() and isset($_GET['id'])) : ?>
-<title>Games Portal</title>
+<title>Удаление статьи</title>
 </head>
 
 <body>

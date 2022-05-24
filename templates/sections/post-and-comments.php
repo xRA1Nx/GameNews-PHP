@@ -1,5 +1,11 @@
 <?php
 require './templates/functions/arrays_fns.php';
+
+if (!isset($_SESSION['id']) and  isset($_GET['comment_id'])) {
+  header("location:./post.php?id=$_GET[id]");
+}
+
+
 if ($_SERVER['REQUEST_METHOD'] === "GET") {
   $post_query = "SELECT id, id_author, id_category,  title, text, main_img, date_time 
   FROM news WHERE id = $_GET[id]";
@@ -81,10 +87,14 @@ NAV;
       </p>
     </div>
     <img class="post-main-img" src="<?php echo $post['main_img'] ?>" alt="POST big Img" />
+  </div>
+  <div class="post-box">
     <p class="post-text">
-      <?php echo $post['text'] ?>
+      <?php echo str_replace("\n", "</p><p class='post-text'>", $post['text'])  ?>
     </p>
   </div>
+
+
 
 
   <?php
@@ -92,48 +102,71 @@ NAV;
     if ($_SERVER['REQUEST_METHOD'] === "GET") {
       echo '<div name="form-comments" id="form-comments">';
       // ЕСЛИ пользователь авторизован то показываем форму
-      if (isset($_SESSION['id'])) {
+      if (isset($_SESSION['id']) and  !isset($_GET['comment_id'])) {
 
     ?>
 
   <!-- :::::::::::::
                   !!! ФОРМА!!!
                 :::::::::::::::-->
+
   <form method="post" class="form-post-comment">
     <textarea class="input-post-comment" name="comment" placeholder="Введите ваше сообщение"></textarea>
-    <img class="post-my-avatar avatar" src="./imgs/ava-default.svg" alt="user avatar" />
-    <input class="submit-comment" type="submit" />
+    <img class="comment-avatar avatar" src="<?php echo $_SESSION['avatar'] ?>" alt="user avatar" />
+    <div class="comment-actions">
+      <input class="submit-comment" type="submit" />
+    </div>
   </form>
-  <?php } else {
+  <?php } else 
+        if (!isset($_GET['comment_id'])) {
         // иначе предлагаем ползователю зарегистрироваться чтобы оставить комментарий
         echo "<p>Чтобы оставить комментарий <a href='./sign-in.php'>войдите в систему</a></p>";
       }
+
       echo '</div>'
       ?>
 
   <?php
       // Выгружаем из БД комментарии и данные пользователей по ним и заполняем страницу
-      $query_post_comments = "SELECT id_news, id_user, text, date_time FROM comments WHERE id_news = $_GET[id] ORDER BY date_time DESC";
+      $query_post_comments = "SELECT id, id_news, id_user, text, date_time FROM comments WHERE id_news = $_GET[id] ORDER BY date_time DESC";
       $get_comment = $pdo->query($query_post_comments);
       while ($comment = $get_comment->fetch()) {
-        $query_user = "SELECT id, nickname, avatar FROM USERS
+        $query_user = "SELECT id, nickname, avatar FROM users
       WHERE id = $comment[id_user]";
         $user = $pdo->query($query_user)->fetch();
         $comment_date_time = date_format(date_create($comment['date_time']), 'd.m.Y H:i');
+        // если нажали кнопку "изменить" у комментария выводим форму и наполняем ее
+        if (isset($_GET['comment_id']) and $comment['id'] === (int)$_GET['comment_id'] and isset($_SESSION['id'])) {
+          echo <<< FORM
+          <form method="post" class="form-post-comment" id='comment-$comment[id]'>
+          <textarea class="input-post-comment" name="comment" placeholder="Введите ваше сообщение">$comment[text]</textarea>
+          <img class="comment-avatar avatar" src="$_SESSION[avatar]" alt="user avatar" />
+          <div class="comment-actions">
+          <input class="submit-comment" type="submit" value="изменить" />
+          <p class="comment-button"><a  class="cancel-link" href='./post.php?id=$_GET[id]#comment-$comment[id]'>отменить</a></p>
+          </div>
+          </form>
+  FORM;
+        } else {
+          // выгружаем циклом комментарии по одному
 
-        echo <<<ROW
-      <div class="post-comment">
-      <p class="comment-user-nick">
-        $user[nickname] <span>$comment_date_time</span>
-      </p>
-      <img class="avatar comment-avatar" src="$user[avatar]" alt="user avatar" />
+          echo "<div class='post-comment'>";
+          echo "<p class='comment-user-nick' id='comment-$comment[id]'>";
+          echo "$user[nickname] <span>$comment_date_time</span></p>";
+          echo "<img class='avatar comment-avatar' src='$user[avatar]' alt='user avatar' />";
+          echo "<p class='comment-text'>$comment[text]</p>";
 
-      <p class="comment-text">
-        $comment[text]
-      </p>
-    </div>
 
-ROW;
+          // если есть сессия и пользователь может удалить/редактировать свои комменты
+          if (isset($_SESSION['id']) and $comment['id_user'] === $_SESSION['id']) {
+            echo "<nav>
+      <a href='./post.php?id=$_GET[id]&action=edit&comment_id=$comment[id]#comment-$comment[id]'>редактировать</a>
+      <a
+        href='./comment-actions.php?action=del&comment_id=$comment[id]&id_user=$comment[id_user]&post_id=$_GET[id]'>удалить</a>
+    </nav>";
+          }
+          echo '</div>';
+        }
       };
       ?>
 
@@ -142,6 +175,11 @@ ROW;
 <?php } else {
   // Если метод POST
   if (!empty($_POST["comment"])) {
+    if (isset($_GET['action'])) {
+      $prepare_comment = $pdo->prepare("UPDATE comments SET text = ? WHERE id =?");
+      $prepare_comment->execute([$_POST['text'],  $_GET['comment_id']]);
+    }
+
     // Если комментарий не пустой то записываем его в БД
     $prepare_comment = $pdo->prepare("INSERT INTO comments(id_news, id_user, text) VALUES (?,?,?)");
     $prepare_comment->execute([$_GET['id'], $_SESSION['id'], $_POST['comment']]);

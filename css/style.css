@@ -147,9 +147,6 @@ a:visited {
   justify-content: center;
 }
 
-/* .forms-box {
-  } */
-
 .nav-list {
   text-decoration: none;
   list-style: none;
@@ -218,9 +215,3 @@ a:visited {
   margin-left: 2.4rem;
   margin-bottom: 0.6rem;
 }
-
-/* .create-post-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-} */

@@ -7,7 +7,7 @@ if (isset($_SESSION['email']) and is_author()) : ?>
 
 
 
-<title>Games Portal</title>
+<title>Создание статьи</title>
 </head>
 
 <body>

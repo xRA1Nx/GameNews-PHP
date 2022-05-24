@@ -13,7 +13,7 @@
 .post {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(3, auto);
   column-gap: 3.2rem;
   row-gap: 1.6rem;
   margin-bottom: 2.4rem;
@@ -25,7 +25,7 @@
 .post-author-conteiner {
   display: flex;
   flex-direction: column;
-  grid-row: 2/-2;
+  grid-row: 2 / -1;
   grid-column: 1/2;
   align-items: flex-end;
 }
@@ -34,7 +34,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto auto;
-  gap: 0 2rem;
+  gap: 0.8rem 2rem;
   align-items: center;
   padding: 1.2rem 0;
   border-bottom: 0.1rem solid #d9d9d9;
@@ -52,6 +52,12 @@
 .post-text {
   font-size: 1.6rem;
   line-height: 1.4;
+  text-indent: 4.8rem;
+  text-align: justify;
+}
+
+.post-box {
+  padding: 1.2rem 4.8rem;
 }
 
 .h1-postnews-title {
@@ -122,20 +128,45 @@
   margin-bottom: 1.2rem;
 }
 
-.post-my-avatar {
-  grid-column: 1;
-  grid-row: 1;
-}
-
 .input-post-comment {
   grid-row: 1/3;
   height: 10rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.comment-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 0.4rem;
 }
 
 .submit-comment {
-  grid-row: -1;
-  grid-column: -2;
-  max-width: 7rem;
+  max-width: 8rem;
+  background-color: #b77a11;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  align-self: start;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.2rem;
+  font-family: "Inter", sans-serif;
+}
+
+.comment-button {
+  background-color: #b77a11;
+  border: none;
+  border-radius: 7px;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+.comment-button .cancel-link:link {
+  color: #fff;
+  font-size: 1.2rem;
+
+  text-decoration: none;
+  font-weight: 400;
 }
 
 /***************************/
@@ -149,7 +180,7 @@
 
 .comment-avatar {
   grid-column: 1/2;
-  grid-row: 1/2;
+  grid-row: 1 / span 3;
 }
 .comment-text {
   grid-column: 2/3;

@@ -37,13 +37,15 @@
       </div>
       <div class="footer-comment-details">
         <img class="icon comment-icon" src="./imgs/Comments.svg" alt="comment icon" />
-        <a class="link-comment-count" href="#">$comments_count</a>
-      </div>
-    </div>
-  </div>
 HTML;
-  }
   ?>
+  <?php echo "<a class='link-comment-count' href='./post.php?id=$news_row[id]#form-comments'>$comments_count</a>"; ?>
+  </div>
+  </div>
+  </div>
+
+  <?php } ?>
+
 
 
   <div class="pagination">
