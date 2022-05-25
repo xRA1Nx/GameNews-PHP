@@ -4,16 +4,11 @@ ob_start();
 
 
 require "./templates/reuseble/head.php"; ?>
-<title>Регистрация выполнена</title>
+<title>Сброс пароля выполнена</title>
 </head>
 
 <body>
   <?php   //header
-  $email =  $_SESSION['email'];
-  $fname = ucfirst(strtolower($_SESSION['fname']));
-  $lname = ucfirst(strtolower($_SESSION['lname']));
-  $password =  $_SESSION['password'];
-  unset($_SESSION['email']);
 
 
   require "./templates/reuseble/header.php"; ?>
@@ -23,7 +18,8 @@ require "./templates/reuseble/head.php"; ?>
     <?php
 
     // PUT YOUR SECTION HERE
-    require "./templates/sections/reg-confirm.php";
+
+    require "./templates/sections/new-pass-section.php";
     // PUT YOUR SECTION HERE
 
     ?>

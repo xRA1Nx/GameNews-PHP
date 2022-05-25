@@ -215,3 +215,10 @@ a:visited {
   margin-left: 2.4rem;
   margin-bottom: 0.6rem;
 }
+
+.p-form-error {
+  color: red;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+  margin-left: 0.7rem;
+}

@@ -18,6 +18,7 @@
                 $_SESSION['email'] = $_POST["email"];
                 $_SESSION['fname'] = $_POST["first_name"];
                 $_SESSION['lname'] = $_POST["last_name"];
+                $_SESSION['password'] = $_POST["password"];
                 $_SESSION['from'] = "registration";
                 $insert_query = $pdo->prepare("INSERT INTO users VALUE(null,?,?,?,?,?,default)");
 

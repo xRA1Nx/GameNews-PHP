@@ -120,7 +120,7 @@ NAV;
   <?php } else 
         if (!isset($_GET['comment_id'])) {
         // иначе предлагаем ползователю зарегистрироваться чтобы оставить комментарий
-        echo "<p>Чтобы оставить комментарий <a href='./sign-in.php'>войдите в систему</a></p>";
+        echo "<p>Чтобы оставить комментарий <a href='./sign-in.php?from=$_SERVER[REQUEST_URI]'>войдите в систему</a></p>";
       }
 
       echo '</div>'
@@ -138,7 +138,7 @@ NAV;
         // если нажали кнопку "изменить" у комментария выводим форму и наполняем ее
         if (isset($_GET['comment_id']) and $comment['id'] === (int)$_GET['comment_id'] and isset($_SESSION['id'])) {
           echo <<< FORM
-          <form method="post" class="form-post-comment" id='comment-$comment[id]'>
+          <form action="./post.php?id=$_GET[id]&action=edit&comment_id=$comment[id]#comment-$comment[id]" method="post" class="form-post-comment" id='comment-$comment[id]'>
           <textarea class="input-post-comment" name="comment" placeholder="Введите ваше сообщение">$comment[text]</textarea>
           <img class="comment-avatar avatar" src="$_SESSION[avatar]" alt="user avatar" />
           <div class="comment-actions">
@@ -170,23 +170,27 @@ NAV;
       };
       ?>
 
-</section>
-<?php } ?>
-<?php } else {
+  <!-- <a href='./post.php?id=$_GET[id]&action=edit&comment_id=$comment[id]#comment-$comment[id]'>редактировать</a> -->
+
+  <?php } ?>
+  <?php } else {
+
   // Если метод POST
   if (!empty($_POST["comment"])) {
+    // если есть гет запрос на изменение статьи
     if (isset($_GET['action'])) {
       $prepare_comment = $pdo->prepare("UPDATE comments SET text = ? WHERE id =?");
-      $prepare_comment->execute([$_POST['text'],  $_GET['comment_id']]);
+      $prepare_comment->execute([$_POST['comment'],  $_GET['comment_id']]);
+    } else {
+      // Если комментарий не пустой то записываем его в БД
+      $prepare_comment = $pdo->prepare("INSERT INTO comments(id_news, id_user, text) VALUES (?,?,?)");
+      $prepare_comment->execute([$_GET['id'], $_SESSION['id'], $_POST['comment']]);
     }
-
-    // Если комментарий не пустой то записываем его в БД
-    $prepare_comment = $pdo->prepare("INSERT INTO comments(id_news, id_user, text) VALUES (?,?,?)");
-    $prepare_comment->execute([$_GET['id'], $_SESSION['id'], $_POST['comment']]);
   }
   // В обоих случаях перенаправляем на эту страницу с новостями на якорь комментария
   header("location:post.php?id=$_GET[id]#form-comments");
 }
 
 
-?>
+  ?>
+</section>

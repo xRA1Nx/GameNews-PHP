@@ -161,10 +161,10 @@
   padding: 0.2rem;
   cursor: pointer;
 }
-.comment-button .cancel-link:link {
+.comment-button .cancel-link:link,
+.comment-button .cancel-link:visited {
   color: #fff;
   font-size: 1.2rem;
-
   text-decoration: none;
   font-weight: 400;
 }

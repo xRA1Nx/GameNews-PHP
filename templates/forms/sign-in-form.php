@@ -20,7 +20,7 @@ if (isset($_SESSION['email'])) {
       foreach ($user as $key => $val) {
         $_SESSION[$key] = $val;
       }
-      header("location:lk.php");
+      header("location:$_GET[from]");
     }
 
 

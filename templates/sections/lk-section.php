@@ -117,7 +117,7 @@ ROW;
           <input class="inp-submit" type = "SUBMIT" value="изменить">
           </div>
           </form>
-          <p class = "change-profile-attention">После изменения данных понадобится повторно авторизоваться</p>
+
           FORM;
         }
         //меняем имя
@@ -148,7 +148,7 @@ ROW;
           <input class="inp-submit" type = "SUBMIT" value="изменить">
           </div>
           </form>
-          <p class = "change-profile-attention">После изменения данных понадобится повторно авторизоваться</p>
+        
           FORM;
         }
 
@@ -181,7 +181,7 @@ ROW;
         <input class="inp-submit" type = "SUBMIT" value="изменить">
         </div>
         </form>
-        <p class = "change-profile-attention">После изменения данных понадобится повторно авторизоватьс"</p>
+       
 FORM;
         }
         //удаляем аву
@@ -224,7 +224,7 @@ FORM;
         <input class="inp-submit" type = "SUBMIT" value="изменить">
         </div>
         </form>
-        <p class = "change-profile-attention">После изменения данных понадобится повторно авторизоваться</p>
+
 FORM;
         }
         // изменяем email

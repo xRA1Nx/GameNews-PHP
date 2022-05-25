@@ -1,8 +1,10 @@
 <?php
+// require('./templates/functions/form_validation_fns.php');
 
 /************************************
 ФОРМА РЕГИСТРАЦИИ
  ************************************/
+
 
 function validate_reg_form()
 {
@@ -163,6 +165,7 @@ _HTML_;
 ФОРМА АВТОРИЗАЦИИ
  ************************************/
 
+
 function validate_signin_form()
 {
 
@@ -203,7 +206,7 @@ function validate_signin_form()
         } elseif (!preg_match($reg_exp, $email)) {
             return 'Адрес электронной почты введен в неверном формате';
         } elseif (!$user_exists) {
-            return 'Пользователя с таким именем и паролем не существует';
+            return 'Пользователя с таким email и паролем не существует';
         } else {
             return "";
         }
@@ -249,6 +252,7 @@ function show_signin_form($errors = [], $input = [])
           <input class="inp" type="password" name="password" placeholder="более восьми символов" value="$input[password]">
           
           <p>Нет учетной записи? Пройдите <a href="./registration.php">регистрацию</a></p>
+          <p>Забыли пароль?  <a href="./make-new-pass.php">Востановить пароль</a></p>
          
         </div>
      
@@ -381,13 +385,13 @@ function show_creat_form($errors = [], $input = [])
 
       <div>
         <label for="post_img_url">Основная картинка:</label  <span>$errors[post_img_url]</span><br>
-        <input type="url" name="post_img_url" id="post_img_url" placeholder="ссылка на вашу картинку" value="$input[post_img_url]">
+        <input type="text" name="post_img_url" id="post_img_url" placeholder="ссылка на вашу картинку" value="$input[post_img_url]">
       
       </div>
 
       <div>
         <label for="news_img_url">доп. картинка:</label><span>$errors[news_img_url]</span><br>
-        <input type="url" name="news_img_url" id="news_img_url" placeholder="ссылка на вашу картинку" value="$input[news_img_url]" >
+        <input type="text" name="news_img_url" id="news_img_url" placeholder="ссылка на вашу картинку" value="$input[news_img_url]" >
         
       </div>
 
@@ -427,4 +431,29 @@ function get_post_and_category($id)
     // $category = $pdo->query($category_query)->fetch();
     $post = $pdo->query($post_query)->fetch();
     return $post;
+}
+
+function validate_reset_pass($email)
+{
+    require './templates/functions/arrays_fns.php';
+    require './templates/configs/db_connect.php';
+    $reg_exp = "/^.+@.+$/u";
+
+    empty($_POST['email']) ? $email = "0" : $email = $_POST['email'];
+    $user_query = "SELECT email, password 
+    FROM users
+    WHERE email LIKE '$email'";
+    $user_exists = $pdo->query($user_query)->fetch();
+
+
+    if (empty($email)) {
+
+        return 'заполните поле';
+    } elseif (!preg_match($reg_exp, $email)) {
+        return 'Адрес электронной почты введен в неверном формате';
+    } elseif (!$user_exists) {
+        return 'Пользователя с такой эл. почтой не существует';
+    } else {
+        return "";
+    }
 }
