@@ -32,8 +32,8 @@ title VARCHAR(80)  NOT NULL,
 
 post_description TEXT NOT NULL CHECK (CHAR_LENGTH(post_description) <=320),
 text TEXT NOT NULL,
-main_img  TEXT NOT NULL CHECK (CHAR_LENGTH(post_description) <=500),
-small_img TEXT NOT NULL CHECK (CHAR_LENGTH(post_description) <=500),
+main_img  TEXT NOT NULL CHECK (CHAR_LENGTH(main_img) <=500),
+small_img TEXT NOT NULL CHECK (CHAR_LENGTH(small_img) <=500),
 
 FOREIGN KEY(id_author) REFERENCES authors(id) ON DELETE CASCADE,
 FOREIGN KEY(id_category) REFERENCES categorys(id) ON DELETE CASCADE

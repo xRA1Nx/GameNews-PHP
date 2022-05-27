@@ -14,13 +14,25 @@
   padding: 1.2rem 0;
 }
 
+.pagination a {
+  color: rgba(255, 255, 255, 0.66);
+}
+
 .pagination span {
   color: #fff;
 }
 
+.pag-btn-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
 .pag-link:link,
 .pag-link:visited {
-  color: #fff;
+  /* color: #fff; */
   text-decoration: none;
   width: 2.4rem;
   height: 2.4rem;
@@ -34,6 +46,19 @@
   font-size: 1.6rem;
   font-weight: 500;
 }
+
+.pag-activ:link,
+.pag-activ:visited,
+.pag-start-end:hover,
+.pag-start-end:active {
+  color: #b77a11;
+  font-weight: 600;
+}
+
+/* .pag-activ:link,
+.pag-activ:visited {
+  color: #fff;
+} */
 
 .pag-btn-icon {
   width: 2.4rem;

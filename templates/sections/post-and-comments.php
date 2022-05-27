@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
   $query_author = "SELECT nickname FROM users where id = $post[id_author]";
   $nick_name = $pdo->query($query_author)->fetch()['nickname'];
   $post_date_time = date_format(date_create($post['date_time']), 'd.m.Y H:i');
-  $query_comments = "SELECT COUNT(id_news) AS comments_count FROM comments where id_news = $_GET[id]";
+  $query_comments = "SELECT COUNT(id_news) AS comments_count FROM comments WHERE id_news = $_GET[id]";
   $comments_count = $pdo->query($query_comments)->fetch()['comments_count'];
   $category = $post["id_category"];
 

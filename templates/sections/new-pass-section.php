@@ -10,6 +10,7 @@
     <h1 class="h1-white h1-white-margin-b">
       Страница восстановления вашего пароля
     </h1>
+    <p>Для восстановление вашего пароля укажите ваш email</p>
 
     <?php
     if (!isset($_GET['massage'])) {
@@ -27,14 +28,15 @@
         if (!$error) {
           $query = "SELECT  fname, lname, password FROM users WHERE email LIKE '$_POST[email]'";
           $user = $pdo->query($query)->fetch();
-          $massage =  "Уважаемый $user[fname] $user[lname], ваш пароль - $user[password]. Настоятельно рекомендуем Вам изменить ваш пароль в личном кабинете!";
+          $massage =  "Уважаемый $user[fname] $user[lname], ваш пароль - $user[password]. Настоятельно рекомендуем Вам изменить ваш пароль в личном кабинете!
+          ссылка на личный кабинет - http://f0673760.xsph.ru/lk.php ";
           mail(
             "$_POST[email]",
             'восстановление пароля',
             $massage
           );
 
-          header("location:make-new-pass.php?massage=send&email=$_POST[email]");
+          header("location:./make-new-pass.php?massage=send&email=$_POST[email]");
         }
       }
 

@@ -20,7 +20,13 @@ if (isset($_SESSION['email'])) {
       foreach ($user as $key => $val) {
         $_SESSION[$key] = $val;
       }
-      header("location:$_GET[from]");
+      // если мы зашли с какой либо страницы то будет редирект на нее
+      if (isset($_GET['from'])) {
+        header("location:$_GET[from]");
+        // иначе будет редирект в ЛК
+      } else {
+        header("location:lk.php");
+      }
     }
 
 

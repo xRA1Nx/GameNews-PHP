@@ -9,11 +9,15 @@ require "./templates/reuseble/head.php"; ?>
 
 <body>
   <?php   //header
-  $email =  $_SESSION['email'];
-  $fname = ucfirst(strtolower($_SESSION['fname']));
-  $lname = ucfirst(strtolower($_SESSION['lname']));
+  if (isset($_SESSION['email'])) {
+    $email =  $_SESSION['email'];
+    unset($_SESSION['email']);
+  }
+
+  $fname =  $_SESSION['fname'];
+  $lname = $_SESSION['lname'];
   $password =  $_SESSION['password'];
-  unset($_SESSION['email']);
+
 
 
   require "./templates/reuseble/header.php"; ?>

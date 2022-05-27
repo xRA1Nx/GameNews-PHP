@@ -3,7 +3,7 @@ DELETE FROM users;
 ALTER TABLE users AUTO_INCREMENT=0;
 
 INSERT INTO users (fname, lname, email, password, nickname) 
-VALUES('Станислав','Порхачевский', "stwski@yandex.ru", "12345678", "xRA1Nx");
+VALUES('Станислав','Порхачевский', "stwski@gmail.com", "12345678", "xRA1Nx");
 
 INSERT INTO users (fname, lname, email, password, nickname) 
 VALUES('Петр','Пятаков', "user1@yandex.ru", "12345678", "PetrP");

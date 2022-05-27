@@ -13,6 +13,7 @@
 
       show_creat_form($errors, $input);
     } else {
+
       // если форма валидна cоздаем сессию и добавляем в бд статью
       $query_get_id_cat = "SELECT id FROM categorys WHERE name = '$_POST[category]'";
       $id_category = $pdo->query($query_get_id_cat)->fetch()["id"];

@@ -1,8 +1,9 @@
 <aside class="aside-right">
   <div class='hot-watched-discussed'>
     <p>
-      <a class="link-hwd link-hot-disscused" href="#">Top обсуждаемые</a>
+      <!-- <a class="link-hwd link-hot-disscused" href="#">Top обсуждаемые</a> -->
       <!-- <a class="link-hwd link-hot-watched" href="#">Top просмотров</a> -->
+      Top обсуждаемые
     </p>
   </div>
 

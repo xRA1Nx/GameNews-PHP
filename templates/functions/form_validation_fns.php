@@ -195,7 +195,7 @@ function validate_signin_form()
         empty($_POST['password']) ? $pass = "0" : $pass = $_POST['password'];
         $user_query = "SELECT email, password 
         FROM users
-        WHERE password = $pass 
+        WHERE password LIKE '$pass' 
         AND email LIKE '$email'";
         $user_exists = $pdo->query($user_query)->fetch();
 
