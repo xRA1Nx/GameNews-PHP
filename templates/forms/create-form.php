@@ -60,16 +60,14 @@
     if (isset($_GET['id'])) {
 
       // заполняем форму из уже имеющихся данных статьи
-      $post = get_post_and_category($_GET['id']);
-      // $input['category'] = $post['name'];
+      list($post, $category_name) = get_post_and_category($_GET['id']);
       $input['post_title'] = $post['title'];
       $input['post_preview'] = $post['post_description'];
       $input['post_text'] = $post['text'];
       $input['post_img_url'] = $post['main_img'];
       $input['news_img_url'] = $post['small_img'];
+      $input['category'] = $category_name;
     }
-
-
 
     show_creat_form($errors, $input);
   }

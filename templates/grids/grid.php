@@ -1,5 +1,5 @@
 <?php
-$size_page = 6; // количество новостей на одной странице
+$size_page = 9; // количество новостей на одной странице
 ?>
 
 <section class="grid grid3" id="grid-section">

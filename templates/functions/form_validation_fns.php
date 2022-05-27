@@ -361,7 +361,10 @@ function validate_сreat_form()
 
 function show_creat_form($errors = [], $input = [])
 {
-
+    function find_selection($inp, $val)
+    {
+        return $inp == $val ? 'selected ' : "";
+    }
     echo <<<_HTML_
             <div class="forms-box">
     <h1 class="h1-white h1-white-margin-b">
@@ -369,68 +372,80 @@ function show_creat_form($errors = [], $input = [])
     </h1>
     <form class="reuse-form" action="" method="POST">
       <div>
+    
         <label for="category">Категория:</label><span>$errors[category]</span><br>
         <select id="category" class="inp" name="category">
-          <option value="">Выберите категорию:</option>
-          <option value="Diablo">Diablo</option>
-          <option value="Overwatch">Overwatch</option>
-          <option value="Herous of the storm">HoS</option>
-          <option value="Starcraft">Starcraft</option>
-          <option value="Hearthstone">Hearthstone</option>
-          <option value="Warcraft">Warcraft</option>
-          <option value="Другие игры">Другие игры</option>
-        </select>
-        
-      </div>
-
-      <div>
-        <label for="post_img_url">Основная картинка:</label  <span>$errors[post_img_url]</span><br>
-        <input type="text" name="post_img_url" id="post_img_url" placeholder="ссылка на вашу картинку" value="$input[post_img_url]">
-      
-      </div>
-
-      <div>
-        <label for="news_img_url">доп. картинка:</label><span>$errors[news_img_url]</span><br>
-        <input type="text" name="news_img_url" id="news_img_url" placeholder="ссылка на вашу картинку" value="$input[news_img_url]" >
-        
-      </div>
-
-      <div>
-        <label for="post_title">Заголовок:</label>  <span>$errors[post_title]</span><br>
-        <input class="inp" type="text" name="post_title" id="post_title" placeholder="не более 80 символов"
-          value="$input[post_title]" >
-      
-      </div>
-
-      <div>
-        <label for="post_preview">Краткое описание:</label><span>$errors[post_preview]</span><br>
-        <textarea class="inp   post-preview-ta" id="post-preview" name="post_preview" placeholder="не более 320 символов">$input[post_preview]</textarea>
-      </div>
-
-
-
-      <div>
-        <label for="post_text">Текст статьи:</label><span>$errors[post_text]</span><br>
-        <textarea class="inp post-ta" name="post_text" id="post_text" placeholder="Введите ваше сообщение" >$input[post_text]</textarea>
-      </div>
-
-      <input class="inp-submit" type="submit" value="разместить">
-    </form>
-    </div>
-
 _HTML_;
+
+?>
+
+<option value=''>Выберите категорию:</option>
+<option <?php echo find_selection($input['category'], 'Diablo') ?>value='Diablo'>Diablo</option>
+<option <?php echo find_selection("$input[category]", 'Overwatch') ?>value='Overwatch'>Overwatch</option>
+<option <?php echo find_selection($input['category'], 'HoS') ?>value='HoS'>HoS</option>
+<option <?php echo find_selection($input['category'], 'Starcraft') ?>value='Starcraft'>Starcraft</option>
+<option <?php echo find_selection($input['category'], 'Hearthstone') ?>value='Hearthstone'>Hearthstone</option>
+<option <?php echo find_selection($input['category'], 'Warcraft') ?>value='Warcraft'>Warcraft</option>
+<option <?php echo find_selection($input['category'], 'Другие игры') ?>value='Другие игры'>Другие игры</option>
+
+
+<?php
+    echo <<<_HTML_2
+</select>
+</div>
+
+<div>
+  <label for="post_img_url">Основная картинка:</label><span>$errors[post_img_url]</span><br>
+  <input type="text" name="post_img_url" id="post_img_url" placeholder="ссылка на вашу картинку"
+    value="$input[post_img_url]">
+
+</div>
+
+<div>
+  <label for="news_img_url">доп. картинка:</label><span>$errors[news_img_url]</span><br>
+  <input type="text" name="news_img_url" id="news_img_url" placeholder="ссылка на вашу картинку"
+    value="$input[news_img_url]">
+
+</div>
+
+<div>
+  <label for="post_title">Заголовок:</label> <span>$errors[post_title]</span><br>
+  <input class="inp" type="text" name="post_title" id="post_title" placeholder="не более 80 символов"
+    value="$input[post_title]">
+
+</div>
+
+<div>
+  <label for="post_preview">Краткое описание:</label><span>$errors[post_preview]</span><br>
+  <textarea class="inp   post-preview-ta" id="post-preview" name="post_preview"
+    placeholder="не более 320 символов">$input[post_preview]</textarea>
+</div>
+
+
+
+<div>
+  <label for="post_text">Текст статьи:</label><span>$errors[post_text]</span><br>
+  <textarea class="inp post-ta" name="post_text" id="post_text"
+    placeholder="Введите ваше сообщение">$input[post_text]</textarea>
+</div>
+
+<input class="inp-submit" type="submit" value="разместить">
+</form>
+</div>
+
+_HTML_2;
 }
 
 function get_post_and_category($id)
 {
     require './templates/configs/db_connect.php';
     $post_query = "SELECT id, id_category, title, post_description, text, main_img, small_img
-    FROM news WHERE id = $id";
-    $category_query = "SELECT name, id_news 
-    FROM categorys  WHERE id_news = $id";
-    // $category = $pdo->query($category_query)->fetch();
+FROM news WHERE id = $id";
+    $category_query = "SELECT categorys.name, categorys.id, news.id_category
+    FROM categorys, news WHERE categorys.id = news.id_category and news.id = $id";
+    $category = $pdo->query($category_query)->fetch()['name'];
     $post = $pdo->query($post_query)->fetch();
-    return $post;
+    return [$post, $category];
 }
 
 function validate_reset_pass($email)
@@ -438,11 +453,10 @@ function validate_reset_pass($email)
     require './templates/functions/arrays_fns.php';
     require './templates/configs/db_connect.php';
     $reg_exp = "/^.+@.+$/u";
-
     empty($_POST['email']) ? $email = "0" : $email = $_POST['email'];
-    $user_query = "SELECT email, password 
-    FROM users
-    WHERE email LIKE '$email'";
+    $user_query = "SELECT email, password
+FROM users
+WHERE email LIKE '$email'";
     $user_exists = $pdo->query($user_query)->fetch();
 
 

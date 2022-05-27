@@ -52,6 +52,889 @@ VALUES('Другие игры');
 DELETE FROM news;
 ALTER TABLE news AUTO_INCREMENT=0;
 
+-- 1
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 2
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 3
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 4
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 5
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 6
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 7
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 8
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 9
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 10
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 11
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 12
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 13
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 14
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 7, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 15
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 7, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 16
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 7, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 17
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 7, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 18
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 7, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 19
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 7, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+-- 20
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 1, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"DIABLO: тест", "DIABLO: тест", "DIABLO: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 2, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Overwatch: тест", "Overwatch: тест", "Overwatch: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 3, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Herous of the storm: тест", "Herous of the storm: тест", "Herous of the storm: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 4, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Starcraft: тест", "Starcraft: тест", "Starcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 5, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Hearthstone: тест", "Hearthstone: тест", "Hearthstone: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 6, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"World of Warcraft: тест", "World of Warcraft: тест", "World of Warcraft: тест");
+
+INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
+VALUES( 
+1, 7, 
+"./imgs/test.jpg", "./imgs/test.jpg",
+"Другие игры: тест", "Другие игры: тест", "Другие игры: тест");
+
+
+
+
 INSERT INTO news  (id_author, id_category, small_img, main_img, title, post_description, text)
 VALUES( 
 1,
@@ -359,29 +1242,29 @@ ALTER TABLE comments AUTO_INCREMENT=0;
 
 
 INSERT INTO comments(id_news, id_user, text)
-VALUES(6, 2, "Отличная статья!");
+VALUES(146, 2, "Отличная статья!");
 
 INSERT INTO comments(id_news, id_user, text)
-VALUES(1, 2, "круто");
+VALUES(141, 2, "круто");
 INSERT INTO comments(id_news, id_user, text)
-VALUES(1, 3, "благодарю за статью!");
+VALUES(141, 3, "благодарю за статью!");
 
 INSERT INTO comments(id_news, id_user, text)
-VALUES(2, 2, "круто");
+VALUES(142, 2, "круто");
 INSERT INTO comments(id_news, id_user, text)
-VALUES(2, 2, "Спасибо!");
+VALUES(142, 2, "Спасибо!");
 INSERT INTO comments(id_news, id_user, text)
-VALUES(2, 3, "интересно");
+VALUES(142, 3, "интересно");
 
 
 INSERT INTO comments(id_news, id_user, text)
-VALUES(4, 2, "круто");
+VALUES(144, 2, "круто");
 INSERT INTO comments(id_news, id_user, text)
-VALUES(4, 2, "Спасибо!");
+VALUES(144, 2, "Спасибо!");
 INSERT INTO comments(id_news, id_user, text)
-VALUES(4, 3, "интересно");
+VALUES(144, 3, "интересно");
 INSERT INTO comments(id_news, id_user, text)
-VALUES(4, 3, "благодарю за статью!");
+VALUES(144, 3, "благодарю за статью!");
 
 
 
