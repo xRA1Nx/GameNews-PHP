@@ -54,9 +54,9 @@ $count_query = "SELECT COUNT(*) FROM news";
 
 
     $query_count = "SELECT news.id, news.id_author, news.title, news.date_time, news.post_description, news.main_img, news.small_img, news.id_category, categorys.name
-  FROM news, categorys 
-  WHERE news.id_category = categorys.id AND categorys.name = '$_GET[name]'
-  ORDER BY id DESC";
+    FROM news, categorys 
+    WHERE news.id_category = categorys.id AND categorys.name = '$_GET[name]'
+    ORDER BY id DESC";
 
     $query_limited = "SELECT news.id, news.id_author, news.title, news.date_time, news.post_description, news.main_img, news.small_img, news.id_category, categorys.name
   FROM news, categorys 
@@ -66,10 +66,9 @@ $count_query = "SELECT COUNT(*) FROM news";
   }
 
   $news_count = count($pdo->query($query_count)->fetchall(PDO::FETCH_ASSOC));
-  // Вычисляем количество страниц
+
   $total_pages = ceil($news_count / $size_page);
-  // echo $total_pages;
-  // echo $news_count;
+
 
   $filtred_news = $pdo->query($query_limited);
 
